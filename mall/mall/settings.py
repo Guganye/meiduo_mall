@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'apps.users'
 ]
 
 MIDDLEWARE = [
@@ -127,6 +128,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# -------------------django-redis----------------------todo:location
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
@@ -135,7 +137,7 @@ CACHES = {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
     },
-"session": {
+    "session": {
         "BACKEND": "django_redis.cache.RedisCache",
         "LOCATION": "redis://127.0.0.1:6379/1",
         "OPTIONS": {
@@ -146,20 +148,47 @@ CACHES = {
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "session"
 
+# ---------------------日志--------------------------
 LOGGING = {
     'version': 1,
+    'disable_existing_loggers': False,  # 是否禁用已经存在的日志器
+    'formatters': {  # 日志信息显示的格式
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(lineno)d %(message)s'
+        },
+        'simple': {
+            'format': '%(levelname)s %(module)s %(lineno)d %(message)s'
+        },
+    },
+    'filters': {
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+    },
     'handlers': {
+        'console': {
+            'level': 'INFO',
+            'filters': ['require_debug_true'],
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
         'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': 'C:/Users/般般帅/Desktop/mall/mall/logs/django.log',
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/meiduo.log'),
+            'maxBytes': 300 * 1024 * 1024,
+            'backupCount': 10,
+            'formatter': 'verbose'
         },
     },
     'loggers': {
         'django': {
             'handlers': ['console', 'file'],
             'propagate': True,
-            'level': 'DEBUG',
+            'level': 'INFO',
         },
-    },
+    }
 }
+
+# ---------------自定义模型替代默认-------------
+AUTH_USER_MODEL = 'users.User'
