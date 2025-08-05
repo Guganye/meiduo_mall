@@ -1,9 +1,13 @@
 import json
 import re
 
-from django.http import JsonResponse
+from django.contrib.auth import login
+from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 from django.views import View
+from django_redis import get_redis_connection
+
+from libs.captcha.captcha import captcha
 
 from apps.users.models import User
 
@@ -32,13 +36,18 @@ class RegisterView(View):
         if not re.match('^1[3-9]\d{9}$', mobile):
             return JsonResponse({'code':400, 'errmsg':'请输入正确的电话号码'})
 
-        user = User.objects.get(username=username)
+        user = User.objects.filter(username=username)
         if user:
             return JsonResponse({'code':400, 'errmsg':'用户名重复'})
 
         try:
-            User.objects.create_user(username=username, password=password, mobile=mobile, sms_code=sms_code)
+            User.objects.create_user(username=username, password=password, mobile=mobile)
         except Exception as e:
-            return JsonResponse({'code':400, 'errmsg':e})
+            return JsonResponse({'code':400, 'errmsg':f'{e}'})
+
+        login(request, user)
 
         return JsonResponse({'code':0, 'errmsg':'ok'})
+
+
+
