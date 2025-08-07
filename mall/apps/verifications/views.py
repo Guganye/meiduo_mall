@@ -16,7 +16,7 @@ class ImageCodeView(View):
         redis_cli = get_redis_connection('code')
         redis_cli.setex(code, 100, text)
 
-        return HttpResponse(image)
+        return HttpResponse(content=image, content_type="image/jpeg")
 
 # -----------------------------
 

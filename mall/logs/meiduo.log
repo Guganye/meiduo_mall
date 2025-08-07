@@ -133,3 +133,520 @@ Traceback (most recent call last):
     raise ConnectionError(f"Error while reading from {host_error} : {e.args}")
 redis.exceptions.ConnectionError: Error while reading from 192.168.31.128:6379 : (10054, '‘∂≥Ã÷˜ª˙«ø∆»πÿ±’¡À“ª∏ˆœ÷”–µƒ¡¨Ω”°£', None, 10054, None)
 ERROR 2025-08-05 19:38:52,756 basehttp 212 "GET /verification/image/550e8400-e29b-41d4-a716-446655440000/ HTTP/1.1" 500 142520
+INFO 2025-08-06 19:22:40,695 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-06 19:23:26,764 basehttp 212 "POST /user/register/ HTTP/1.1" 200 57
+ERROR 2025-08-06 19:27:51,565 log 246 Internal Server Error: /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\verifications\views.py", line 17, in get
+    redis_cli.setex(code, 100, text)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 2330, in setex
+    return self.execute_command("SETEX", name, time, value)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 1530, in get_connection
+    connection.connect()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 397, in connect_check_health
+    self.on_connect_check_health(check_health=check_health)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 469, in on_connect_check_health
+    auth_response = self.read_response()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 666, in read_response
+    raise response
+redis.exceptions.ResponseError: DENIED Redis is running in protected mode because protected mode is enabled, no bind address was specified, no authentication password is requested to clients. In this mode connections are only accepted from the loopback interface. If you want to connect from external computers to Redis you may adopt one of the following solutions: 1) Just disable protected mode sending the command 'CONFIG SET protected-mode no' from the loopback interface by connecting to Redis from the same host the server is running, however MAKE SURE Redis is not publicly accessible from internet if you do so. Use CONFIG REWRITE to make this change permanent. 2) Alternatively you can just disable the protected mode by editing the Redis configuration file, and setting the protected mode option to 'no', and then restarting the server. 3) If you started the server manually just for testing, restart it with the '--protected-mode no' option. 4) Setup a bind address or an authentication password. NOTE: You only need to do one of the above things in order for the server to start accepting connections from the outside.
+ERROR 2025-08-06 19:27:51,620 basehttp 212 "GET /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/ HTTP/1.1" 500 125374
+ERROR 2025-08-06 19:42:03,502 log 246 Internal Server Error: /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 644, in read_response
+    response = self._parser.read_response(disable_decoding=disable_decoding)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\_parsers\resp2.py", line 15, in read_response
+    result = self._read_response(disable_decoding=disable_decoding)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\_parsers\resp2.py", line 25, in _read_response
+    raw = self._buffer.readline()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\_parsers\socket.py", line 115, in readline
+    self._read_from_socket()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\_parsers\socket.py", line 65, in _read_from_socket
+    data = self._sock.recv(socket_read_size)
+ConnectionResetError: [WinError 10054] ‘∂≥Ã÷˜ª˙«ø∆»πÿ±’¡À“ª∏ˆœ÷”–µƒ¡¨Ω”°£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\verifications\views.py", line 17, in get
+    redis_cli.setex(code, 100, text)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 2330, in setex
+    return self.execute_command("SETEX", name, time, value)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 1530, in get_connection
+    connection.connect()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 397, in connect_check_health
+    self.on_connect_check_health(check_health=check_health)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 469, in on_connect_check_health
+    auth_response = self.read_response()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 652, in read_response
+    raise ConnectionError(f"Error while reading from {host_error} : {e.args}")
+redis.exceptions.ConnectionError: Error while reading from 192.168.31.128:6379 : (10054, '‘∂≥Ã÷˜ª˙«ø∆»πÿ±’¡À“ª∏ˆœ÷”–µƒ¡¨Ω”°£', None, 10054, None)
+ERROR 2025-08-06 19:42:03,552 basehttp 212 "GET /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/ HTTP/1.1" 500 143230
+INFO 2025-08-06 19:42:20,519 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-06 19:42:24,890 log 246 Internal Server Error: /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\verifications\views.py", line 17, in get
+    redis_cli.setex(code, 100, text)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 2330, in setex
+    return self.execute_command("SETEX", name, time, value)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 1530, in get_connection
+    connection.connect()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 397, in connect_check_health
+    self.on_connect_check_health(check_health=check_health)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 469, in on_connect_check_health
+    auth_response = self.read_response()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 666, in read_response
+    raise response
+redis.exceptions.ResponseError: DENIED Redis is running in protected mode because protected mode is enabled, no bind address was specified, no authentication password is requested to clients. In this mode connections are only accepted from the loopback interface. If you want to connect from external computers to Redis you may adopt one of the following solutions: 1) Just disable protected mode sending the command 'CONFIG SET protected-mode no' from the loopback interface by connecting to Redis from the same host the server is running, however MAKE SURE Redis is not publicly accessible from internet if you do so. Use CONFIG REWRITE to make this change permanent. 2) Alternatively you can just disable the protected mode by editing the Redis configuration file, and setting the protected mode option to 'no', and then restarting the server. 3) If you started the server manually just for testing, restart it with the '--protected-mode no' option. 4) Setup a bind address or an authentication password. NOTE: You only need to do one of the above things in order for the server to start accepting connections from the outside.
+ERROR 2025-08-06 19:42:24,911 basehttp 212 "GET /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/ HTTP/1.1" 500 125374
+INFO 2025-08-06 19:48:51,695 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-06 19:48:58,452 log 246 Internal Server Error: /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\verifications\views.py", line 17, in get
+    redis_cli.setex(code, 100, text)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 2330, in setex
+    return self.execute_command("SETEX", name, time, value)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 1530, in get_connection
+    connection.connect()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 397, in connect_check_health
+    self.on_connect_check_health(check_health=check_health)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 469, in on_connect_check_health
+    auth_response = self.read_response()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 666, in read_response
+    raise response
+redis.exceptions.ResponseError: DENIED Redis is running in protected mode because protected mode is enabled, no bind address was specified, no authentication password is requested to clients. In this mode connections are only accepted from the loopback interface. If you want to connect from external computers to Redis you may adopt one of the following solutions: 1) Just disable protected mode sending the command 'CONFIG SET protected-mode no' from the loopback interface by connecting to Redis from the same host the server is running, however MAKE SURE Redis is not publicly accessible from internet if you do so. Use CONFIG REWRITE to make this change permanent. 2) Alternatively you can just disable the protected mode by editing the Redis configuration file, and setting the protected mode option to 'no', and then restarting the server. 3) If you started the server manually just for testing, restart it with the '--protected-mode no' option. 4) Setup a bind address or an authentication password. NOTE: You only need to do one of the above things in order for the server to start accepting connections from the outside.
+ERROR 2025-08-06 19:48:58,479 basehttp 212 "GET /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/ HTTP/1.1" 500 125386
+INFO 2025-08-06 19:50:55,996 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\mall\settings.py changed, reloading.
+INFO 2025-08-06 19:50:58,194 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-06 19:51:04,745 log 246 Internal Server Error: /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 644, in read_response
+    response = self._parser.read_response(disable_decoding=disable_decoding)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\_parsers\resp2.py", line 15, in read_response
+    result = self._read_response(disable_decoding=disable_decoding)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\_parsers\resp2.py", line 25, in _read_response
+    raw = self._buffer.readline()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\_parsers\socket.py", line 115, in readline
+    self._read_from_socket()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\_parsers\socket.py", line 65, in _read_from_socket
+    data = self._sock.recv(socket_read_size)
+ConnectionResetError: [WinError 10054] ‘∂≥Ã÷˜ª˙«ø∆»πÿ±’¡À“ª∏ˆœ÷”–µƒ¡¨Ω”°£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\verifications\views.py", line 17, in get
+    redis_cli.setex(code, 100, text)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 2330, in setex
+    return self.execute_command("SETEX", name, time, value)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 1530, in get_connection
+    connection.connect()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 397, in connect_check_health
+    self.on_connect_check_health(check_health=check_health)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 530, in on_connect_check_health
+    self.read_response()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 652, in read_response
+    raise ConnectionError(f"Error while reading from {host_error} : {e.args}")
+redis.exceptions.ConnectionError: Error while reading from 192.168.31.128:6379 : (10054, '‘∂≥Ã÷˜ª˙«ø∆»πÿ±’¡À“ª∏ˆœ÷”–µƒ¡¨Ω”°£', None, 10054, None)
+ERROR 2025-08-06 19:51:04,764 basehttp 212 "GET /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/ HTTP/1.1" 500 142410
+INFO 2025-08-06 19:51:31,751 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\mall\settings.py changed, reloading.
+INFO 2025-08-06 19:51:33,780 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-06 19:51:38,097 log 246 Internal Server Error: /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\verifications\views.py", line 17, in get
+    redis_cli.setex(code, 100, text)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 2330, in setex
+    return self.execute_command("SETEX", name, time, value)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 1530, in get_connection
+    connection.connect()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 397, in connect_check_health
+    self.on_connect_check_health(check_health=check_health)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 469, in on_connect_check_health
+    auth_response = self.read_response()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 666, in read_response
+    raise response
+redis.exceptions.ResponseError: DENIED Redis is running in protected mode because protected mode is enabled, no bind address was specified, no authentication password is requested to clients. In this mode connections are only accepted from the loopback interface. If you want to connect from external computers to Redis you may adopt one of the following solutions: 1) Just disable protected mode sending the command 'CONFIG SET protected-mode no' from the loopback interface by connecting to Redis from the same host the server is running, however MAKE SURE Redis is not publicly accessible from internet if you do so. Use CONFIG REWRITE to make this change permanent. 2) Alternatively you can just disable the protected mode by editing the Redis configuration file, and setting the protected mode option to 'no', and then restarting the server. 3) If you started the server manually just for testing, restart it with the '--protected-mode no' option. 4) Setup a bind address or an authentication password. NOTE: You only need to do one of the above things in order for the server to start accepting connections from the outside.
+ERROR 2025-08-06 19:51:38,125 basehttp 212 "GET /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/ HTTP/1.1" 500 125278
+ERROR 2025-08-06 19:58:10,430 log 246 Internal Server Error: /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 644, in read_response
+    response = self._parser.read_response(disable_decoding=disable_decoding)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\_parsers\resp2.py", line 15, in read_response
+    result = self._read_response(disable_decoding=disable_decoding)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\_parsers\resp2.py", line 25, in _read_response
+    raw = self._buffer.readline()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\_parsers\socket.py", line 115, in readline
+    self._read_from_socket()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\_parsers\socket.py", line 65, in _read_from_socket
+    data = self._sock.recv(socket_read_size)
+ConnectionResetError: [WinError 10054] ‘∂≥Ã÷˜ª˙«ø∆»πÿ±’¡À“ª∏ˆœ÷”–µƒ¡¨Ω”°£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\verifications\views.py", line 17, in get
+    redis_cli.setex(code, 100, text)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 2330, in setex
+    return self.execute_command("SETEX", name, time, value)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 1530, in get_connection
+    connection.connect()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 397, in connect_check_health
+    self.on_connect_check_health(check_health=check_health)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 469, in on_connect_check_health
+    auth_response = self.read_response()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 652, in read_response
+    raise ConnectionError(f"Error while reading from {host_error} : {e.args}")
+redis.exceptions.ConnectionError: Error while reading from 192.168.31.128:6379 : (10054, '‘∂≥Ã÷˜ª˙«ø∆»πÿ±’¡À“ª∏ˆœ÷”–µƒ¡¨Ω”°£', None, 10054, None)
+ERROR 2025-08-06 19:58:10,487 basehttp 212 "GET /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/ HTTP/1.1" 500 142778
+INFO 2025-08-06 19:58:23,947 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-06 19:58:28,989 log 246 Internal Server Error: /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\verifications\views.py", line 17, in get
+    redis_cli.setex(code, 100, text)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 2330, in setex
+    return self.execute_command("SETEX", name, time, value)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 1530, in get_connection
+    connection.connect()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 397, in connect_check_health
+    self.on_connect_check_health(check_health=check_health)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 469, in on_connect_check_health
+    auth_response = self.read_response()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 666, in read_response
+    raise response
+redis.exceptions.ResponseError: DENIED Redis is running in protected mode because protected mode is enabled, no bind address was specified, no authentication password is requested to clients. In this mode connections are only accepted from the loopback interface. If you want to connect from external computers to Redis you may adopt one of the following solutions: 1) Just disable protected mode sending the command 'CONFIG SET protected-mode no' from the loopback interface by connecting to Redis from the same host the server is running, however MAKE SURE Redis is not publicly accessible from internet if you do so. Use CONFIG REWRITE to make this change permanent. 2) Alternatively you can just disable the protected mode by editing the Redis configuration file, and setting the protected mode option to 'no', and then restarting the server. 3) If you started the server manually just for testing, restart it with the '--protected-mode no' option. 4) Setup a bind address or an authentication password. NOTE: You only need to do one of the above things in order for the server to start accepting connections from the outside.
+ERROR 2025-08-06 19:58:29,010 basehttp 212 "GET /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/ HTTP/1.1" 500 125399
+ERROR 2025-08-06 20:01:38,370 log 246 Internal Server Error: /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\verifications\views.py", line 17, in get
+    redis_cli.setex(code, 100, text)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 2330, in setex
+    return self.execute_command("SETEX", name, time, value)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 1530, in get_connection
+    connection.connect()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 397, in connect_check_health
+    self.on_connect_check_health(check_health=check_health)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 469, in on_connect_check_health
+    auth_response = self.read_response()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 666, in read_response
+    raise response
+redis.exceptions.ResponseError: DENIED Redis is running in protected mode because protected mode is enabled, no bind address was specified, no authentication password is requested to clients. In this mode connections are only accepted from the loopback interface. If you want to connect from external computers to Redis you may adopt one of the following solutions: 1) Just disable protected mode sending the command 'CONFIG SET protected-mode no' from the loopback interface by connecting to Redis from the same host the server is running, however MAKE SURE Redis is not publicly accessible from internet if you do so. Use CONFIG REWRITE to make this change permanent. 2) Alternatively you can just disable the protected mode by editing the Redis configuration file, and setting the protected mode option to 'no', and then restarting the server. 3) If you started the server manually just for testing, restart it with the '--protected-mode no' option. 4) Setup a bind address or an authentication password. NOTE: You only need to do one of the above things in order for the server to start accepting connections from the outside.
+ERROR 2025-08-06 20:01:38,399 basehttp 212 "GET /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/ HTTP/1.1" 500 124338
+ERROR 2025-08-06 20:04:36,373 log 246 Internal Server Error: /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\verifications\views.py", line 17, in get
+    redis_cli.setex(code, 100, text)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 2330, in setex
+    return self.execute_command("SETEX", name, time, value)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 1530, in get_connection
+    connection.connect()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 397, in connect_check_health
+    self.on_connect_check_health(check_health=check_health)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 469, in on_connect_check_health
+    auth_response = self.read_response()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 666, in read_response
+    raise response
+redis.exceptions.ResponseError: DENIED Redis is running in protected mode because protected mode is enabled, no bind address was specified, no authentication password is requested to clients. In this mode connections are only accepted from the loopback interface. If you want to connect from external computers to Redis you may adopt one of the following solutions: 1) Just disable protected mode sending the command 'CONFIG SET protected-mode no' from the loopback interface by connecting to Redis from the same host the server is running, however MAKE SURE Redis is not publicly accessible from internet if you do so. Use CONFIG REWRITE to make this change permanent. 2) Alternatively you can just disable the protected mode by editing the Redis configuration file, and setting the protected mode option to 'no', and then restarting the server. 3) If you started the server manually just for testing, restart it with the '--protected-mode no' option. 4) Setup a bind address or an authentication password. NOTE: You only need to do one of the above things in order for the server to start accepting connections from the outside.
+ERROR 2025-08-06 20:04:36,402 basehttp 212 "GET /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/ HTTP/1.1" 500 125422
+INFO 2025-08-07 13:17:24,129 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-07 13:22:55,090 log 246 Internal Server Error: /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\verifications\views.py", line 17, in get
+    redis_cli.setex(code, 100, text)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 2330, in setex
+    return self.execute_command("SETEX", name, time, value)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 1530, in get_connection
+    connection.connect()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 397, in connect_check_health
+    self.on_connect_check_health(check_health=check_health)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 469, in on_connect_check_health
+    auth_response = self.read_response()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 666, in read_response
+    raise response
+redis.exceptions.ResponseError: DENIED Redis is running in protected mode because protected mode is enabled, no bind address was specified, no authentication password is requested to clients. In this mode connections are only accepted from the loopback interface. If you want to connect from external computers to Redis you may adopt one of the following solutions: 1) Just disable protected mode sending the command 'CONFIG SET protected-mode no' from the loopback interface by connecting to Redis from the same host the server is running, however MAKE SURE Redis is not publicly accessible from internet if you do so. Use CONFIG REWRITE to make this change permanent. 2) Alternatively you can just disable the protected mode by editing the Redis configuration file, and setting the protected mode option to 'no', and then restarting the server. 3) If you started the server manually just for testing, restart it with the '--protected-mode no' option. 4) Setup a bind address or an authentication password. NOTE: You only need to do one of the above things in order for the server to start accepting connections from the outside.
+ERROR 2025-08-07 13:22:55,115 basehttp 212 "GET /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/ HTTP/1.1" 500 124105
+ERROR 2025-08-07 13:23:11,733 log 246 Internal Server Error: /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\verifications\views.py", line 17, in get
+    redis_cli.setex(code, 100, text)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 2330, in setex
+    return self.execute_command("SETEX", name, time, value)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 1530, in get_connection
+    connection.connect()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 397, in connect_check_health
+    self.on_connect_check_health(check_health=check_health)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 469, in on_connect_check_health
+    auth_response = self.read_response()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 666, in read_response
+    raise response
+redis.exceptions.ResponseError: DENIED Redis is running in protected mode because protected mode is enabled, no bind address was specified, no authentication password is requested to clients. In this mode connections are only accepted from the loopback interface. If you want to connect from external computers to Redis you may adopt one of the following solutions: 1) Just disable protected mode sending the command 'CONFIG SET protected-mode no' from the loopback interface by connecting to Redis from the same host the server is running, however MAKE SURE Redis is not publicly accessible from internet if you do so. Use CONFIG REWRITE to make this change permanent. 2) Alternatively you can just disable the protected mode by editing the Redis configuration file, and setting the protected mode option to 'no', and then restarting the server. 3) If you started the server manually just for testing, restart it with the '--protected-mode no' option. 4) Setup a bind address or an authentication password. NOTE: You only need to do one of the above things in order for the server to start accepting connections from the outside.
+ERROR 2025-08-07 13:23:11,807 basehttp 212 "GET /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/ HTTP/1.1" 500 127631
+WARNING 2025-08-07 13:23:13,389 log 246 Not Found: /favicon.ico
+WARNING 2025-08-07 13:23:13,400 basehttp 212 "GET /favicon.ico HTTP/1.1" 404 2326
+INFO 2025-08-07 13:49:09,131 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-07 13:49:52,107 log 246 Internal Server Error: /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\verifications\views.py", line 17, in get
+    redis_cli.setex(code, 100, text)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 2330, in setex
+    return self.execute_command("SETEX", name, time, value)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 1530, in get_connection
+    connection.connect()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 397, in connect_check_health
+    self.on_connect_check_health(check_health=check_health)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 469, in on_connect_check_health
+    auth_response = self.read_response()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 644, in read_response
+    response = self._parser.read_response(disable_decoding=disable_decoding)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\_parsers\resp2.py", line 15, in read_response
+    result = self._read_response(disable_decoding=disable_decoding)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\_parsers\resp2.py", line 38, in _read_response
+    raise error
+redis.exceptions.AuthenticationError: Client sent AUTH, but no password is set
+ERROR 2025-08-07 13:49:52,133 basehttp 212 "GET /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/ HTTP/1.1" 500 129665
+ERROR 2025-08-07 13:54:39,501 log 246 Internal Server Error: /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\verifications\views.py", line 17, in get
+    redis_cli.setex(code, 100, text)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 2330, in setex
+    return self.execute_command("SETEX", name, time, value)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 634, in _execute_command
+    return conn.retry.call_with_retry(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\retry.py", line 87, in call_with_retry
+    return do()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 635, in <lambda>
+    lambda: self._send_command_parse_response(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 605, in _send_command_parse_response
+    conn.send_command(*args, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 609, in send_command
+    self._command_packer.pack(*args),
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 114, in pack
+    for arg in map(self.encode, args):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\_parsers\encoders.py", line 29, in encode
+    raise DataError(
+redis.exceptions.DataError: Invalid input of type: 'UUID'. Convert to a bytes, string, int or float first.
+ERROR 2025-08-07 13:54:39,524 basehttp 212 "GET /verification/image/3fa85f64-5717-4562-b3fc-2c963f66afa6/ HTTP/1.1" 500 120928
+INFO 2025-08-07 13:57:11,911 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-07 13:57:24,902 basehttp 212 "GET /verification/image/123/ HTTP/1.1" 200 1875
+INFO 2025-08-07 14:05:50,870 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\verifications\views.py changed, reloading.
+INFO 2025-08-07 14:05:53,449 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-07 14:06:09,016 basehttp 212 "GET /verification/image/123/ HTTP/1.1" 200 2289
+WARNING 2025-08-07 14:06:09,916 log 246 Not Found: /favicon.ico
+WARNING 2025-08-07 14:06:09,919 basehttp 212 "GET /favicon.ico HTTP/1.1" 404 2326
