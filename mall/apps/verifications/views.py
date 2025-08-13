@@ -1,20 +1,42 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.views import View
 from django_redis import get_redis_connection
 from libs.captcha.captcha import captcha
+from libs.yuntongxun.sms import CCP
 
 
 # Create your views here.
+class SmsCodeView(View):
+    def get(self, request, mobile):
+        image_code=request.GET.get('image_code')
+        image_code_id=request.GET.get('image_code_id')
+
+        if not all([image_code, image_code_id]):
+            return JsonResponse({'code':400, 'errmsg':'参数不全'})
+
+        # 图片验证码
+        redis_cli=get_redis_connection('code')
+        redis_image_code=redis_cli.get(image_code_id)
+        if redis_image_code is None:
+            return JsonResponse({'code':400,'errmsg':'图片验证码已过期'})
+        if redis_image_code.decode().lower() != image_code.lower():
+            return JsonResponse({'code':400, 'errmsg':'图片验证码错误'})
+
+        # 短信验证码
+        sms_code = '%06d' % random.randint(0,999999)
+        redis_cli.setex(mobile, 300, sms_code)
+        CCP().send_template_sms(mobile, [sms_code, 5], 1)
+        return JsonResponse({'code':0, 'errmsg':'ok'})
 
 class ImageCodeView(View):
 
-    def get(self, request, code):
+    def get(self, request, image_code_id):
         captcha = Captcha()
         text, image = captcha.generate_captcha()
 
         redis_cli = get_redis_connection('code')
-        redis_cli.setex(code, 100, text)
+        redis_cli.setex(image_code_id, 100, text)
 
         return HttpResponse(content=image, content_type="image/jpeg")
 

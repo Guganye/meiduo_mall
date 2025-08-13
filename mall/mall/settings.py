@@ -132,7 +132,7 @@ STATIC_URL = '/static/'
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://192.168.31.128:6379/0",
+        "LOCATION": "redis://192.168.234.128:6379/0",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
             "PASSWORD":os.getenv("REDIS_PASSWORD"),
@@ -140,7 +140,7 @@ CACHES = {
     },
     "session": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://192.168.31.128:6379/1",
+        "LOCATION": "redis://192.168.234.128:6379/1",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
             "PASSWORD":os.getenv("REDIS_PASSWORD"),
@@ -148,7 +148,7 @@ CACHES = {
     },
     "code":{
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://192.168.31.128:6379/2",
+        "LOCATION": "redis://192.168.234.128:6379/2",
         "OPTIONS":{
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
             "PASSWORD":os.getenv("REDIS_PASSWORD"),

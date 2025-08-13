@@ -14,10 +14,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, register_converter
+
+from apps.verifications.converters import UUIDConverter, MobileConverter
+
+register_converter(UUIDConverter, 'uuid')
+register_converter(MobileConverter, 'mobile')
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('user/', include('apps.users.urls')),
-    path('verification/', include('apps.verifications.urls'))
+    path('', include('apps.verifications.urls'))
 ]

@@ -650,3 +650,199 @@ INFO 2025-08-07 14:05:53,449 autoreload 667 Watching for file changes with StatR
 INFO 2025-08-07 14:06:09,016 basehttp 212 "GET /verification/image/123/ HTTP/1.1" 200 2289
 WARNING 2025-08-07 14:06:09,916 log 246 Not Found: /favicon.ico
 WARNING 2025-08-07 14:06:09,919 basehttp 212 "GET /favicon.ico HTTP/1.1" 404 2326
+INFO 2025-08-08 11:45:23,931 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-08 11:46:28,659 log 246 Internal Server Error: /verification/image/123/
+Traceback (most recent call last):
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 385, in connect_check_health
+    sock = self.retry.call_with_retry(
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\retry.py", line 87, in call_with_retry
+    return do()
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 386, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 797, in _connect
+    raise err
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 781, in _connect
+    sock.connect(socket_address)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\般般帅\Desktop\mall\mall\apps\verifications\views.py", line 17, in get
+    redis_cli.setex(code, 100, text)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 2330, in setex
+    return self.execute_command("SETEX", name, time, value)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 1530, in get_connection
+    connection.connect()
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 391, in connect_check_health
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10060 connecting to 192.168.31.128:6379. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+ERROR 2025-08-08 11:46:28,679 basehttp 212 "GET /verification/image/123/ HTTP/1.1" 500 133544
+INFO 2025-08-08 11:48:10,204 basehttp 212 "GET /verification/image/123/ HTTP/1.1" 200 1033
+INFO 2025-08-12 18:55:02,339 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-12 18:55:54,657 log 246 Internal Server Error: /verification/image/123/
+Traceback (most recent call last):
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 385, in connect_check_health
+    sock = self.retry.call_with_retry(
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\retry.py", line 87, in call_with_retry
+    return do()
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 386, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 797, in _connect
+    raise err
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 781, in _connect
+    sock.connect(socket_address)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\般般帅\Desktop\mall\mall\apps\verifications\views.py", line 17, in get
+    redis_cli.setex(code, 100, text)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 2330, in setex
+    return self.execute_command("SETEX", name, time, value)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 1530, in get_connection
+    connection.connect()
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 391, in connect_check_health
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10060 connecting to 192.168.31.128:6379. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+ERROR 2025-08-12 18:55:54,677 basehttp 212 "GET /verification/image/123/ HTTP/1.1" 500 134398
+INFO 2025-08-12 19:06:38,122 basehttp 212 "POST /user/register/ HTTP/1.1" 200 57
+ERROR 2025-08-12 19:51:46,470 log 246 Internal Server Error: /verification/image/123/
+Traceback (most recent call last):
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 385, in connect_check_health
+    sock = self.retry.call_with_retry(
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\retry.py", line 87, in call_with_retry
+    return do()
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 386, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 797, in _connect
+    raise err
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 781, in _connect
+    sock.connect(socket_address)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\般般帅\Desktop\mall\mall\apps\verifications\views.py", line 17, in get
+    redis_cli.setex(code, 100, text)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 2330, in setex
+    return self.execute_command("SETEX", name, time, value)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 1530, in get_connection
+    connection.connect()
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+  File "C:\Users\般般帅\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 391, in connect_check_health
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10060 connecting to 192.168.31.128:6379. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+ERROR 2025-08-12 19:51:46,502 basehttp 212 "GET /verification/image/123/ HTTP/1.1" 500 134458
+INFO 2025-08-12 19:52:33,086 autoreload 265 C:\Users\般般帅\Desktop\mall\mall\mall\settings.py changed, reloading.
+INFO 2025-08-12 19:52:37,796 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-12 19:52:57,951 autoreload 265 C:\Users\般般帅\Desktop\mall\mall\mall\settings.py changed, reloading.
+INFO 2025-08-12 19:53:01,091 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-12 19:53:07,344 basehttp 212 "GET /verification/image/123/ HTTP/1.1" 200 1365
+INFO 2025-08-13 18:46:07,366 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-13 18:46:15,687 basehttp 212 "GET /image_codes/123/ HTTP/1.1" 200 1787
+WARNING 2025-08-13 18:46:40,488 log 246 Not Found: /sms_codes/18126106878
+WARNING 2025-08-13 18:46:40,489 basehttp 212 "GET /sms_codes/18126106878?image_code=OHJ6&image_code_id=123 HTTP/1.1" 404 2686
+WARNING 2025-08-13 18:59:48,951 log 246 Not Found: /sms_codes/18126106878
+WARNING 2025-08-13 18:59:48,955 basehttp 212 "GET /sms_codes/18126106878?image_code=OHJ6&image_code_id=123 HTTP/1.1" 404 2686
+INFO 2025-08-13 19:01:02,141 autoreload 265 C:\Users\般般帅\Desktop\mall\mall\mall\urls.py changed, reloading.
+INFO 2025-08-13 19:01:04,566 autoreload 667 Watching for file changes with StatReloader
+WARNING 2025-08-13 19:01:06,577 log 246 Not Found: /sms_codes/18126106878
+WARNING 2025-08-13 19:01:06,579 basehttp 212 "GET /sms_codes/18126106878?image_code=OHJ6&image_code_id=123 HTTP/1.1" 404 2382
+INFO 2025-08-13 19:01:28,037 autoreload 265 C:\Users\般般帅\Desktop\mall\mall\mall\urls.py changed, reloading.
+INFO 2025-08-13 19:01:29,779 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-13 19:01:33,903 basehttp 212 "GET /image_codes/123/ HTTP/1.1" 200 1440
+INFO 2025-08-13 19:02:48,648 autoreload 265 C:\Users\般般帅\Desktop\mall\mall\apps\verifications\urls.py changed, reloading.
+INFO 2025-08-13 19:02:50,206 autoreload 667 Watching for file changes with StatReloader
+WARNING 2025-08-13 19:03:06,359 log 246 Not Found: /sms_codes/18126106878
+WARNING 2025-08-13 19:03:06,362 basehttp 212 "GET /sms_codes/18126106878?image_code=JNYA&image_code_id=123 HTTP/1.1" 404 2646
+INFO 2025-08-13 19:05:52,006 autoreload 265 C:\Users\般般帅\Desktop\mall\mall\apps\verifications\converters.py changed, reloading.
+INFO 2025-08-13 19:05:54,186 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-13 19:06:03,796 basehttp 212 "GET /sms_codes/18126106878?image_code=JNYA&image_code_id=123 HTTP/1.1" 301 0
+INFO 2025-08-13 19:06:03,901 basehttp 212 "GET /sms_codes/18126106878/?image_code=JNYA&image_code_id=123 HTTP/1.1" 200 75
+INFO 2025-08-13 19:06:11,088 basehttp 212 "GET /image_codes/123/ HTTP/1.1" 200 1398
+INFO 2025-08-13 19:06:19,666 basehttp 212 "GET /sms_codes/18126106878?image_code=XPHP&image_code_id=123 HTTP/1.1" 301 0
+INFO 2025-08-13 19:06:19,677 basehttp 212 "GET /sms_codes/18126106878/?image_code=XPHP&image_code_id=123 HTTP/1.1" 200 69
+INFO 2025-08-13 19:06:31,498 basehttp 212 "GET /image_codes/123/ HTTP/1.1" 200 1453
+INFO 2025-08-13 19:06:35,533 basehttp 212 "GET /sms_codes/18126106878?image_code=XPHP&image_code_id=123 HTTP/1.1" 301 0
+INFO 2025-08-13 19:06:35,544 basehttp 212 "GET /sms_codes/18126106878/?image_code=XPHP&image_code_id=123 HTTP/1.1" 200 69
+INFO 2025-08-13 19:06:48,148 basehttp 212 "GET /sms_codes/18126106878?image_code=Z25H&image_code_id=123 HTTP/1.1" 301 0
+INFO 2025-08-13 19:06:48,159 basehttp 212 "GET /sms_codes/18126106878/?image_code=Z25H&image_code_id=123 HTTP/1.1" 200 69
+INFO 2025-08-13 19:08:17,944 basehttp 212 "GET /sms_codes/18126106878?image_code=Z25H&image_code_id=123 HTTP/1.1" 301 0
+INFO 2025-08-13 19:08:17,981 basehttp 212 "GET /sms_codes/18126106878/?image_code=Z25H&image_code_id=123 HTTP/1.1" 200 75
+INFO 2025-08-13 19:10:36,861 autoreload 265 C:\Users\般般帅\Desktop\mall\mall\apps\verifications\views.py changed, reloading.
+INFO 2025-08-13 19:10:39,522 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-13 19:10:46,719 basehttp 212 "GET /image_codes/123/ HTTP/1.1" 200 1787
+WARNING 2025-08-13 19:11:01,787 log 246 Not Found: /sms_codes/18126106878
+WARNING 2025-08-13 19:11:01,800 basehttp 212 "GET /sms_codes/18126106878?image_code=XKVE&image_code_id=123 HTTP/1.1" 404 2646
+INFO 2025-08-13 19:13:49,409 autoreload 265 C:\Users\般般帅\Desktop\mall\mall\apps\verifications\converters.py changed, reloading.
+INFO 2025-08-13 19:13:51,907 autoreload 667 Watching for file changes with StatReloader
+WARNING 2025-08-13 19:13:57,317 log 246 Not Found: /sms_codes/18126106878
+WARNING 2025-08-13 19:13:57,319 basehttp 212 "GET /sms_codes/18126106878?image_code=XKVE&image_code_id=123 HTTP/1.1" 404 2646
+INFO 2025-08-13 19:14:40,502 autoreload 265 C:\Users\般般帅\Desktop\mall\mall\apps\verifications\converters.py changed, reloading.
+INFO 2025-08-13 19:14:44,348 autoreload 667 Watching for file changes with StatReloader
+WARNING 2025-08-13 19:14:48,559 log 246 Not Found: /sms_codes/18126106878
+WARNING 2025-08-13 19:14:48,561 basehttp 212 "GET /sms_codes/18126106878?image_code=XKVE&image_code_id=123 HTTP/1.1" 404 2646
+INFO 2025-08-13 19:15:02,381 autoreload 265 C:\Users\般般帅\Desktop\mall\mall\apps\verifications\converters.py changed, reloading.
+INFO 2025-08-13 19:15:04,701 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-13 19:15:08,335 basehttp 212 "GET /sms_codes/18126106878?image_code=XKVE&image_code_id=123 HTTP/1.1" 301 0
+INFO 2025-08-13 19:15:08,504 basehttp 212 "GET /sms_codes/18126106878/?image_code=XKVE&image_code_id=123 HTTP/1.1" 200 75
+INFO 2025-08-13 19:15:27,190 autoreload 265 C:\Users\般般帅\Desktop\mall\mall\apps\verifications\converters.py changed, reloading.
+INFO 2025-08-13 19:15:29,005 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-13 19:15:34,259 basehttp 212 "GET /image_codes/123/ HTTP/1.1" 200 1734
+INFO 2025-08-13 19:15:54,751 basehttp 212 "GET /sms_codes/18126106878?image_code=S78S&image_code_id=123 HTTP/1.1" 301 0
+INFO 2025-08-13 19:15:54,769 basehttp 212 "GET /sms_codes/18126106878/?image_code=S78S&image_code_id=123 HTTP/1.1" 200 69
+INFO 2025-08-13 19:17:43,491 autoreload 265 C:\Users\般般帅\Desktop\mall\mall\apps\verifications\views.py changed, reloading.
+INFO 2025-08-13 19:17:46,289 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-13 19:17:52,987 basehttp 212 "GET /image_codes/123/ HTTP/1.1" 200 1495
+INFO 2025-08-13 19:18:02,609 basehttp 212 "GET /sms_codes/18126106878?image_code=5b7p&image_code_id=123 HTTP/1.1" 301 0
+INFO 2025-08-13 19:18:03,079 basehttp 212 "GET /sms_codes/18126106878/?image_code=5b7p&image_code_id=123 HTTP/1.1" 200 27

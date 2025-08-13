@@ -27,8 +27,8 @@ class RegisterView(View):
 
         if not all([username,password,password2,mobile,sms_code,allow]):
             return JsonResponse({'code':400, 'errmsg':'参数不全'})
-        if not re.match('[a-zA-Z]{5,20}', username):
-            return JsonResponse({'code':400, 'errmsg':'用户名不符合规则'})
+        if not re.match('^[a-zA-Z0-9_-]{5,20}$', username) or re.match('^[0-9]+$', username):
+            return JsonResponse({'code':400, 'errmsg':'用户名必须是5-20个字符（字母、数字、_、-）且不能为纯数字'})
         if not re.match('^(?=.*[A-Za-z])(?=.*\d).{8,}$', password):
             return JsonResponse({'code':400, 'errmsg':'密码不符合规则'})
         if not password == password2:
