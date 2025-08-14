@@ -2,8 +2,9 @@ from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.views import View
 from django_redis import get_redis_connection
+from ronglian_sms_sdk import SmsSDK
+
 from libs.captcha.captcha import captcha
-from libs.yuntongxun.sms import CCP
 
 
 # Create your views here.
@@ -24,9 +25,28 @@ class SmsCodeView(View):
             return JsonResponse({'code':400, 'errmsg':'图片验证码错误'})
 
         # 短信验证码
-        sms_code = '%06d' % random.randint(0,999999)
-        redis_cli.setex(mobile, 300, sms_code)
-        CCP().send_template_sms(mobile, [sms_code, 5], 1)
+        send_flag=redis_cli.get('send_flag_%s'%mobile)
+        if send_flag is not None:
+            return JsonResponse({'code':400, 'errmsg':'操作太频繁了'})
+
+        sms_code = '%04d' % random.randint(0,9999)
+        # ----------------------------------
+        # redis_cli.setex(mobile, 300, sms_code)
+        # redis_cli.setex('send_flag_%s' % mobile, 60, 1)
+        # 管道技术(性能提升)
+        pl = redis_cli.pipeline()
+        pl.setex('sms_%s'%mobile, 300, sms_code)
+        pl.setex('send_flag_%s'%mobile, 300, 1)
+        pl.execute()
+        # ----------------------------------
+        # https://www.yuntongxun.com/
+        # pip install ronglian_sms_sdk
+        # 初始化sdk
+        sdk=SmsSDK(accId='2c94811c9860a9c4019888893e0d07c3', \
+                   accToken='0f251435c33e41fba0de98d07fd09620',\
+                   appId='2c94811c9860a9c4019888893fcf07ca')
+        # 调用发送短信方法
+        sdk.sendMessage(tid='1', mobile='18126106878', datas=(sms_code, '5'))
         return JsonResponse({'code':0, 'errmsg':'ok'})
 
 class ImageCodeView(View):
@@ -113,3 +133,10 @@ class Captcha:
                 width=1  # 线宽
             )
 
+
+if __name__ == '__main__':
+    sdk = SmsSDK(accId='2c94811c9860a9c4019888893e0d07c3', \
+                 accToken='0f251435c33e41fba0de98d07fd09620', \
+                 appId='2c94811c9860a9c4019888893fcf07ca')
+    # 调用发送短信方法
+    sdk.sendMessage(tid='1', mobile='18126106878', datas=(1234,'5'))
