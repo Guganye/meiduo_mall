@@ -5,7 +5,7 @@ from django.db import models
 
 # Create your models here.
 class User(AbstractUser):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    id = models.AutoField(primary_key=True)
     mobile = models.CharField(max_length=11, unique=True)
 
     class Meta:

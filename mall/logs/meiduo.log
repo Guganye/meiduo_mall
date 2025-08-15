@@ -856,3 +856,592 @@ INFO 2025-08-14 19:02:06,207 basehttp 212 "GET /sms_codes/18126106878?image_code
 INFO 2025-08-14 19:02:06,225 basehttp 212 "GET /sms_codes/18126106878/?image_code=p2tb&image_code_id=123 HTTP/1.1" 200 63
 INFO 2025-08-14 19:02:47,230 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\verifications\views.py changed, reloading.
 INFO 2025-08-14 19:02:50,515 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 14:37:44,842 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 14:51:21,458 basehttp 212 "POST /user/register/ HTTP/1.1" 200 65
+INFO 2025-08-15 14:52:06,419 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\models.py changed, reloading.
+INFO 2025-08-15 14:52:30,325 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-15 14:52:56,775 log 246 Internal Server Error: /user/register/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\cache.py", line 29, in _decorator
+    return method(self, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\cache.py", line 138, in has_key
+    return self.client.has_key(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\client\default.py", line 740, in has_key
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 10060 connecting to 192.168.234.128:6379. ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py", line 49, in post
+    login(request, user)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\auth\__init__.py", line 118, in login
+    request.session.cycle_key()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 304, in cycle_key
+    self.create()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\sessions\backends\cache.py", line 42, in create
+    self._session_key = self._get_new_session_key()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 150, in _get_new_session_key
+    if not self.exists(session_key):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\sessions\backends\cache.py", line 73, in exists
+    bool(session_key) and (self.cache_key_prefix + session_key) in self._cache
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\cache\backends\base.py", line 299, in __contains__
+    return self.has_key(key)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\cache.py", line 36, in _decorator
+    raise e.__cause__  # noqa: B904
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\client\default.py", line 738, in has_key
+    return client.exists(key) == 1
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 1736, in exists
+    return self.execute_command("EXISTS", *names, keys=names)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 1530, in get_connection
+    connection.connect()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 391, in connect_check_health
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10060 connecting to 192.168.234.128:6379. ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£.
+ERROR 2025-08-15 14:52:56,795 basehttp 212 "POST /user/register/ HTTP/1.1" 500 153147
+INFO 2025-08-15 15:07:46,944 basehttp 212 "POST /user/register/ HTTP/1.1" 200 57
+INFO 2025-08-15 15:10:16,580 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-15 15:10:19,223 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 15:10:33,392 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-15 15:10:38,120 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 15:11:07,553 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-15 15:11:09,485 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 15:11:51,397 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-15 15:11:54,527 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 15:13:11,298 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-15 15:13:13,951 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 15:13:32,664 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-15 15:13:34,631 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 15:14:14,846 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-15 15:14:17,413 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 15:14:39,165 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-15 15:14:41,277 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 15:14:59,059 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-15 15:15:00,774 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 15:15:56,212 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-15 15:15:58,414 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 15:16:58,232 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-15 15:17:00,965 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 15:17:07,215 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-15 15:17:09,097 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 15:24:42,802 basehttp 212 "GET /image_codes/123/ HTTP/1.1" 200 1842
+INFO 2025-08-15 15:24:59,871 basehttp 212 "GET /sms_codes/18126106878?image_code=b7x8&image_code_id=123 HTTP/1.1" 301 0
+ERROR 2025-08-15 15:25:04,679 log 246 Internal Server Error: /sms_codes/18126106878/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\utils\functional.py", line 32, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\transport\virtual\base.py", line 951, in create_channel
+    return self._avail_channels.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 385, in connect_check_health
+    sock = self.retry.call_with_retry(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\retry.py", line 87, in call_with_retry
+    return do()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 386, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 797, in _connect
+    raise err
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 781, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] ”…”⁄ƒø±Íº∆À„ª˙ª˝º´æ‹æ¯£¨Œﬁ∑®¡¨Ω”°£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\utils\functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\connection.py", line 938, in _connection_factory
+    self._connection = self._establish_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\transport\virtual\base.py", line 975, in establish_connection
+    self._avail_channels.append(self.create_channel(self))
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\transport\virtual\base.py", line 953, in create_channel
+    channel = self.Channel(connection)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\transport\redis.py", line 751, in __init__
+    self.client.ping()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 1219, in ping
+    return self.execute_command("PING", **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 1530, in get_connection
+    connection.connect()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 391, in connect_check_health
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to localhost:6379. ”…”⁄ƒø±Íº∆À„ª˙ª˝º´æ‹æ¯£¨Œﬁ∑®¡¨Ω”°£.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\verifications\views.py", line 51, in get
+    celery_send_sms_code.delay(mobile, sms_code)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\celery\app\task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\celery\app\task.py", line 601, in apply_async
+    return app.send_task(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\celery\app\base.py", line 930, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\celery\app\amqp.py", line 523, in send_task_message
+    ret = producer.publish(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\messaging.py", line 190, in publish
+    return _publish(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\connection.py", line 556, in _ensured
+    return fun(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\messaging.py", line 200, in _publish
+    channel = self.channel
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\messaging.py", line 224, in _get_channel
+    channel = self._channel = channel()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\utils\functional.py", line 34, in __call__
+    value = self.__value__ = self.__contract__()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\messaging.py", line 240, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\connection.py", line 957, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+  File "C:\Users\∞„∞„Àß\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 10061 connecting to localhost:6379. ”…”⁄ƒø±Íº∆À„ª˙ª˝º´æ‹æ¯£¨Œﬁ∑®¡¨Ω”°£.
+ERROR 2025-08-15 15:25:04,714 basehttp 212 "GET /sms_codes/18126106878/?image_code=b7x8&image_code_id=123 HTTP/1.1" 500 268987
+INFO 2025-08-15 15:26:00,923 basehttp 212 "GET /image_codes/123/ HTTP/1.1" 200 1787
+INFO 2025-08-15 15:26:13,089 basehttp 212 "GET /sms_codes/18126106878?image_code=a25k&image_code_id=123 HTTP/1.1" 301 0
+INFO 2025-08-15 15:26:13,103 basehttp 212 "GET /sms_codes/18126106878/?image_code=a25k&image_code_id=123 HTTP/1.1" 200 63
+INFO 2025-08-15 15:26:22,584 basehttp 212 "GET /sms_codes/18126106878?image_code=a25k&image_code_id=123 HTTP/1.1" 301 0
+INFO 2025-08-15 15:26:22,595 basehttp 212 "GET /sms_codes/18126106878/?image_code=a25k&image_code_id=123 HTTP/1.1" 200 63
+INFO 2025-08-15 15:29:25,522 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\verifications\views.py changed, reloading.
+INFO 2025-08-15 15:29:27,481 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 15:29:49,674 basehttp 212 "GET /image_codes/123/ HTTP/1.1" 200 2042
+INFO 2025-08-15 15:29:58,851 basehttp 212 "GET /sms_codes/18126106878?image_code=xwt9&image_code_id=123 HTTP/1.1" 301 0
+INFO 2025-08-15 15:29:58,863 basehttp 212 "GET /sms_codes/18126106878/?image_code=xwt9&image_code_id=123 HTTP/1.1" 200 63
+INFO 2025-08-15 15:31:27,179 basehttp 212 "GET /sms_codes/18126106878?image_code=xwt9&image_code_id=123 HTTP/1.1" 301 0
+INFO 2025-08-15 15:31:27,190 basehttp 212 "GET /sms_codes/18126106878/?image_code=xwt9&image_code_id=123 HTTP/1.1" 200 75
+INFO 2025-08-15 15:31:35,389 basehttp 212 "GET /image_codes/123/ HTTP/1.1" 200 1109
+INFO 2025-08-15 15:31:44,305 basehttp 212 "GET /sms_codes/18126106878?image_code=zlmt&image_code_id=123 HTTP/1.1" 301 0
+ERROR 2025-08-15 15:31:49,059 log 246 Internal Server Error: /sms_codes/18126106878/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\utils\functional.py", line 32, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\transport\virtual\base.py", line 951, in create_channel
+    return self._avail_channels.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 385, in connect_check_health
+    sock = self.retry.call_with_retry(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\retry.py", line 87, in call_with_retry
+    return do()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 386, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 797, in _connect
+    raise err
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 781, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] ”…”⁄ƒø±Íº∆À„ª˙ª˝º´æ‹æ¯£¨Œﬁ∑®¡¨Ω”°£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\utils\functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\connection.py", line 938, in _connection_factory
+    self._connection = self._establish_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\transport\virtual\base.py", line 975, in establish_connection
+    self._avail_channels.append(self.create_channel(self))
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\transport\virtual\base.py", line 953, in create_channel
+    channel = self.Channel(connection)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\transport\redis.py", line 751, in __init__
+    self.client.ping()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 1219, in ping
+    return self.execute_command("PING", **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 1530, in get_connection
+    connection.connect()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 391, in connect_check_health
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to localhost:6379. ”…”⁄ƒø±Íº∆À„ª˙ª˝º´æ‹æ¯£¨Œﬁ∑®¡¨Ω”°£.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\verifications\views.py", line 51, in get
+    celery_send_sms_code.delay(mobile, sms_code)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\celery\app\task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\celery\app\task.py", line 601, in apply_async
+    return app.send_task(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\celery\app\base.py", line 930, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\celery\app\amqp.py", line 523, in send_task_message
+    ret = producer.publish(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\messaging.py", line 190, in publish
+    return _publish(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\connection.py", line 556, in _ensured
+    return fun(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\messaging.py", line 200, in _publish
+    channel = self.channel
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\messaging.py", line 224, in _get_channel
+    channel = self._channel = channel()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\utils\functional.py", line 34, in __call__
+    value = self.__value__ = self.__contract__()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\messaging.py", line 240, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\connection.py", line 957, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+  File "C:\Users\∞„∞„Àß\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 10061 connecting to localhost:6379. ”…”⁄ƒø±Íº∆À„ª˙ª˝º´æ‹æ¯£¨Œﬁ∑®¡¨Ω”°£.
+ERROR 2025-08-15 15:31:49,108 basehttp 212 "GET /sms_codes/18126106878/?image_code=zlmt&image_code_id=123 HTTP/1.1" 500 268981
+INFO 2025-08-15 15:33:25,837 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\celery_tasks\config.py changed, reloading.
+INFO 2025-08-15 15:33:27,984 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 15:33:51,174 basehttp 212 "GET /image_codes/123/ HTTP/1.1" 200 1348
+INFO 2025-08-15 15:34:00,065 basehttp 212 "GET /sms_codes/18126106878?image_code=6hfp&image_code_id=123 HTTP/1.1" 301 0
+ERROR 2025-08-15 15:34:01,397 log 246 Internal Server Error: /sms_codes/18126106878/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\utils\functional.py", line 32, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\transport\virtual\base.py", line 951, in create_channel
+    return self._avail_channels.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\utils\functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\connection.py", line 938, in _connection_factory
+    self._connection = self._establish_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\transport\virtual\base.py", line 975, in establish_connection
+    self._avail_channels.append(self.create_channel(self))
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\transport\virtual\base.py", line 953, in create_channel
+    channel = self.Channel(connection)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\transport\redis.py", line 751, in __init__
+    self.client.ping()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 1219, in ping
+    return self.execute_command("PING", **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 1530, in get_connection
+    connection.connect()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 397, in connect_check_health
+    self.on_connect_check_health(check_health=check_health)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 510, in on_connect_check_health
+    self.send_command(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 608, in send_command
+    self.send_packed_command(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 581, in send_packed_command
+    self.check_health()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 573, in check_health
+    self.retry.call_with_retry(self._send_ping, self._ping_failed)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\retry.py", line 92, in call_with_retry
+    raise error
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\retry.py", line 87, in call_with_retry
+    return do()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 563, in _send_ping
+    if str_if_bytes(self.read_response()) != "PONG":
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 644, in read_response
+    response = self._parser.read_response(disable_decoding=disable_decoding)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\_parsers\resp2.py", line 15, in read_response
+    result = self._read_response(disable_decoding=disable_decoding)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\_parsers\resp2.py", line 38, in _read_response
+    raise error
+redis.exceptions.AuthenticationError: Authentication required.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\verifications\views.py", line 51, in get
+    celery_send_sms_code.delay(mobile, sms_code)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\celery\app\task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\celery\app\task.py", line 601, in apply_async
+    return app.send_task(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\celery\app\base.py", line 930, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\celery\app\amqp.py", line 523, in send_task_message
+    ret = producer.publish(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\messaging.py", line 190, in publish
+    return _publish(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\connection.py", line 556, in _ensured
+    return fun(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\messaging.py", line 200, in _publish
+    channel = self.channel
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\messaging.py", line 224, in _get_channel
+    channel = self._channel = channel()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\utils\functional.py", line 34, in __call__
+    value = self.__value__ = self.__contract__()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\messaging.py", line 240, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\connection.py", line 957, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+  File "C:\Users\∞„∞„Àß\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\kombu\connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Authentication required.
+ERROR 2025-08-15 15:34:01,430 basehttp 212 "GET /sms_codes/18126106878/?image_code=6hfp&image_code_id=123 HTTP/1.1" 500 287612
+INFO 2025-08-15 15:38:55,179 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\celery_tasks\config.py changed, reloading.
+INFO 2025-08-15 15:38:57,241 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 15:39:08,509 basehttp 212 "GET /image_codes/123/ HTTP/1.1" 200 1292
+INFO 2025-08-15 15:39:16,368 basehttp 212 "GET /sms_codes/18126106878?image_code=feyg&image_code_id=123 HTTP/1.1" 301 0
+INFO 2025-08-15 15:39:16,886 basehttp 212 "GET /sms_codes/18126106878/?image_code=feyg&image_code_id=123 HTTP/1.1" 200 27
+INFO 2025-08-15 15:48:24,508 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-15 15:48:27,336 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 15:48:59,843 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-15 15:49:01,867 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 15:52:27,204 basehttp 212 "POST /user/login/ HTTP/1.1" 200 27
+INFO 2025-08-15 15:52:37,287 basehttp 212 "POST /user/login/ HTTP/1.1" 200 27
+INFO 2025-08-15 15:52:42,792 basehttp 212 "POST /user/login/ HTTP/1.1" 200 69
+WARNING 2025-08-15 15:53:41,432 log 246 Method Not Allowed (GET): /user/login/
+WARNING 2025-08-15 15:53:41,434 basehttp 212 "GET /user/login/ HTTP/1.1" 405 0
+INFO 2025-08-15 15:53:46,997 basehttp 212 "POST /user/login/ HTTP/1.1" 200 27
+WARNING 2025-08-15 18:30:48,309 log 246 Not Found: /
+WARNING 2025-08-15 18:30:48,319 basehttp 212 "GET / HTTP/1.1" 404 2527
+WARNING 2025-08-15 18:30:49,119 log 246 Not Found: /favicon.ico
+WARNING 2025-08-15 18:30:49,123 basehttp 212 "GET /favicon.ico HTTP/1.1" 404 2578
+WARNING 2025-08-15 18:32:33,725 log 246 Not Found: /login/
+WARNING 2025-08-15 18:32:33,727 basehttp 212 "OPTIONS /login/ HTTP/1.1" 404 2567
+WARNING 2025-08-15 18:32:35,909 log 246 Not Found: /login/
+WARNING 2025-08-15 18:32:35,912 basehttp 212 "OPTIONS /login/ HTTP/1.1" 404 2567
+WARNING 2025-08-15 18:40:52,185 log 246 Not Found: /
+WARNING 2025-08-15 18:40:52,192 basehttp 212 "GET / HTTP/1.1" 404 2527
+INFO 2025-08-15 18:42:19,599 autoreload 667 Watching for file changes with StatReloader
+WARNING 2025-08-15 18:42:23,726 basehttp 212 "GET /static/images/logo.png HTTP/1.1" 404 1804
+WARNING 2025-08-15 18:43:23,690 log 246 Not Found: /register.html
+WARNING 2025-08-15 18:43:23,692 basehttp 212 "GET /register.html HTTP/1.1" 404 2584
+INFO 2025-08-15 18:46:09,316 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-15 18:46:11,508 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 18:46:22,108 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-15 18:46:23,959 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 18:47:12,624 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-15 18:47:14,229 autoreload 667 Watching for file changes with StatReloader
+WARNING 2025-08-15 18:47:55,180 log 246 Not Found: /login.html
+WARNING 2025-08-15 18:47:55,182 basehttp 212 "GET /login.html HTTP/1.1" 404 2575
+INFO 2025-08-15 18:48:26,198 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\mall\urls.py changed, reloading.
+INFO 2025-08-15 18:48:28,163 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 18:48:54,003 basehttp 212 "POST /register/ HTTP/1.1" 200 57
+ERROR 2025-08-15 18:49:40,900 log 246 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\cache.py", line 29, in _decorator
+    return method(self, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\cache.py", line 138, in has_key
+    return self.client.has_key(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\client\default.py", line 740, in has_key
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 10060 connecting to 192.168.234.128:6379. ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py", line 75, in post
+    login(request, user)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\auth\__init__.py", line 118, in login
+    request.session.cycle_key()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 304, in cycle_key
+    self.create()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\sessions\backends\cache.py", line 42, in create
+    self._session_key = self._get_new_session_key()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 150, in _get_new_session_key
+    if not self.exists(session_key):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\sessions\backends\cache.py", line 73, in exists
+    bool(session_key) and (self.cache_key_prefix + session_key) in self._cache
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\cache\backends\base.py", line 299, in __contains__
+    return self.has_key(key)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\cache.py", line 36, in _decorator
+    raise e.__cause__  # noqa: B904
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\client\default.py", line 738, in has_key
+    return client.exists(key) == 1
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 1736, in exists
+    return self.execute_command("EXISTS", *names, keys=names)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 1530, in get_connection
+    connection.connect()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 391, in connect_check_health
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10060 connecting to 192.168.234.128:6379. ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£.
+ERROR 2025-08-15 18:49:40,928 basehttp 212 "POST /login/ HTTP/1.1" 500 152290
+ERROR 2025-08-15 18:52:37,202 log 246 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\cache.py", line 29, in _decorator
+    return method(self, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\cache.py", line 138, in has_key
+    return self.client.has_key(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\client\default.py", line 740, in has_key
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 10060 connecting to 192.168.234.128:6379. ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py", line 75, in post
+    login(request, user)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\auth\__init__.py", line 118, in login
+    request.session.cycle_key()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 304, in cycle_key
+    self.create()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\sessions\backends\cache.py", line 42, in create
+    self._session_key = self._get_new_session_key()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 150, in _get_new_session_key
+    if not self.exists(session_key):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\sessions\backends\cache.py", line 73, in exists
+    bool(session_key) and (self.cache_key_prefix + session_key) in self._cache
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\cache\backends\base.py", line 299, in __contains__
+    return self.has_key(key)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\cache.py", line 36, in _decorator
+    raise e.__cause__  # noqa: B904
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\client\default.py", line 738, in has_key
+    return client.exists(key) == 1
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 1736, in exists
+    return self.execute_command("EXISTS", *names, keys=names)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 1530, in get_connection
+    connection.connect()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 391, in connect_check_health
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10060 connecting to 192.168.234.128:6379. ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£.
+ERROR 2025-08-15 18:52:37,236 basehttp 212 "POST /login/ HTTP/1.1" 500 151842
+INFO 2025-08-15 18:53:22,700 basehttp 212 "POST /login/ HTTP/1.1" 200 27
+INFO 2025-08-15 18:58:02,360 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-15 18:58:04,501 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 18:58:50,999 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-15 18:58:53,127 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 19:02:00,835 autoreload 667 Watching for file changes with StatReloader
+WARNING 2025-08-15 19:02:06,534 basehttp 212 "GET /static/images/logo.png HTTP/1.1" 404 1804
+WARNING 2025-08-15 19:02:39,187 log 246 Not Found: /register.html
+WARNING 2025-08-15 19:02:39,189 basehttp 212 "GET /register.html HTTP/1.1" 404 2988
+INFO 2025-08-15 19:04:40,441 basehttp 212 "GET /register HTTP/1.1" 301 0
+WARNING 2025-08-15 19:04:40,457 log 246 Method Not Allowed (GET): /register/
+WARNING 2025-08-15 19:04:40,458 basehttp 212 "GET /register/ HTTP/1.1" 405 0

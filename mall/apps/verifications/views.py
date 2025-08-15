@@ -31,22 +31,24 @@ class SmsCodeView(View):
 
         sms_code = '%04d' % random.randint(0,9999)
         # ----------------------------------
-        # redis_cli.setex(mobile, 300, sms_code)
+        # redis_cli.setex('sms_%s'%mobile, 300, sms_code)
         # redis_cli.setex('send_flag_%s' % mobile, 60, 1)
         # 管道技术(性能提升)
         pl = redis_cli.pipeline()
         pl.setex('sms_%s'%mobile, 300, sms_code)
-        pl.setex('send_flag_%s'%mobile, 300, 1)
+        pl.setex('send_flag_%s'%mobile, 60, 1)
         pl.execute()
         # ----------------------------------
         # https://www.yuntongxun.com/
         # pip install ronglian_sms_sdk
         # 初始化sdk
-        sdk=SmsSDK(accId='2c94811c9860a9c4019888893e0d07c3', \
-                   accToken='0f251435c33e41fba0de98d07fd09620',\
-                   appId='2c94811c9860a9c4019888893fcf07ca')
-        # 调用发送短信方法
-        sdk.sendMessage(tid='1', mobile='18126106878', datas=(sms_code, '5'))
+        # sdk=SmsSDK(accId='2c94811c9860a9c4019888893e0d07c3', \
+        #            accToken='0f251435c33e41fba0de98d07fd09620',\
+        #            appId='2c94811c9860a9c4019888893fcf07ca')
+        # # 调用发送短信方法
+        # sdk.sendMessage(tid='1', mobile=mobile, datas=(sms_code, '5'))
+        from celery_tasks.sms.tasks import celery_send_sms_code
+        celery_send_sms_code.delay(mobile, sms_code)
         return JsonResponse({'code':0, 'errmsg':'ok'})
 
 class ImageCodeView(View):

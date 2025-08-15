@@ -1,7 +1,7 @@
 import json
 import re
 
-from django.contrib.auth import login
+from django.contrib.auth import login, authenticate, logout
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 from django.views import View
@@ -45,9 +45,57 @@ class RegisterView(View):
         except Exception as e:
             return JsonResponse({'code':400, 'errmsg':f'{e}'})
 
+        # session
         login(request, user)
 
         return JsonResponse({'code':0, 'errmsg':'ok'})
+
+class LoginView(View):
+    def post(self, request):
+        data=json.loads(request.body.decode())
+        username=data.get('username')
+        password=data.get('password')
+        remebered=data.get('remebered')
+
+        if not all([username,password]):
+            return JsonResponse({'code':400, 'errmsg':'参数不全'})
+
+        # method1: db
+        # method2: 本质上也是db
+        # 手机号作为用户名登录User(AbstractUser)
+        if re.match('1[3-9]\d{9}', username):
+            User.USERNAME_FIELD='mobile'
+        else:
+            User.USERNAME_FIELD='username'
+        user = authenticate(username=username,password=password)
+        if user is None:
+            return JsonResponse({'code':400, 'errmsg':'账号或密码错误'})
+
+        # session
+        login(request, user)
+
+        # 记住登录
+        if remebered is not None:
+            # None默认两周过期
+            request.session.set_expiry(None)
+        else:
+            # 浏览器关闭session过期
+            request.session.set_expiry(0)
+
+        response = JsonResponse({'code':0, 'errmsg':'ok'})
+        response.set_cookie('username', username, max_age=2*7*24*3600)
+
+        return response
+
+class LogoutView(View):
+    def delete(self, request):
+        #DELETE
+        logout(request)
+        response=JsonResponse({'code':0, 'errmsg':'ok'})
+        response.delete_cookie('username')
+
+        return response
+
 
 
 
