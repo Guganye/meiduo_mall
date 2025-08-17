@@ -7,9 +7,9 @@ from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 from django.views import View
 from django_redis import get_redis_connection
-from django.core.mail import send_mail
 
-from apps.users.utils import generic_email_verify_token
+from apps.users.utils import generic_email_verify_token, check_verify_token
+
 from libs.captcha.captcha import captcha
 
 from apps.users.models import User
@@ -123,19 +123,47 @@ class EmailView(LoginRequiredJsonMixin, View):
         user.email=email
         user.save()
 
-        # 发送
+        # 发送邮件
         token=generic_email_verify_token(request.user.id)
-        hyperlink=f"<a href='http://www.itcast.cn/?token={token}'>http://www.itcast.cn/?token={token}></a>"
+        hyperlink=f"<a href='http://127.0.0.1:8000/emails/verification/?token={token}'> \
+        http://127.0.0.1:8000/emails/verification/?token={token}</a>"
 
-        send_mail(
-            subject='【美多商城】感谢您的使用，请激活邮箱',
-            message=None,
-            from_email=settings.DEFAULT_FROM_EMAIL,
-            recipient_list=[email],
-            html_message='<p>请点击以下链接激活账号（有效期为：此邮件发出后的30分钟）</p>' + hyperlink
+        # html_message覆盖message
+        subject = '【美多商城】感谢您的使用，请激活邮箱'
+        message = None
+        from_email = settings.DEFAULT_FROM_EMAIL
+        recipient_list = [email]
+        html_message = '<p>请点击以下链接激活账号（有效期为：此邮件发出后的30分钟）</p>' + hyperlink
+
+        from celery_tasks.email.tasks import celery_send_email
+        celery_send_email.delay(
+            subject=subject,
+            message=message,
+            from_email=from_email,
+            recipient_list=recipient_list,
+            html_message=html_message
         )
 
         return JsonResponse({'code':0, 'errmsg':'ok'})
+
+class EmailVerifyView(View):
+    def put(self, request):
+        token=request.GET.get('token')
+        print(token)
+
+        if token is None:
+            return JsonResponse({'code':400, 'errmsg':'参数缺失'})
+
+        user_id=check_verify_token(token)
+        if user_id is None:
+            return JsonResponse({'code':400, 'errmsg':'参数错误'})
+
+        user=User.objects.get(id=user_id)
+        user.email_active=True
+        user.save()
+
+        return JsonResponse({'code':0, 'errmsg':'ok'})
+
 
 
 

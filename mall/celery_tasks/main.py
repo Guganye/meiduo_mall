@@ -8,9 +8,10 @@ app = Celery('celery_tasks')
 # broker
 app.config_from_object('celery_tasks.config')
 # 自动检测指定包的任务 tasks
-app.autodiscover_tasks(['celery_tasks.sms'])
+app.autodiscover_tasks(['celery_tasks.sms', 'celery_tasks.email'])
 # worker
 # celery -A 实例化脚本路径 worker -l info
+# Windows权限限制（管理员身份运行） or celery -A celery_tasks.main worker --pool=solo
 # celery -A celery_tasks.main worker -l info
 
 # 精简版

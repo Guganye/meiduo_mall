@@ -1638,3 +1638,72 @@ INFO 2025-08-17 19:52:28,849 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
 INFO 2025-08-17 19:53:23,784 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
 INFO 2025-08-17 19:53:25,728 autoreload 667 Watching for file changes with StatReloader
 INFO 2025-08-17 19:53:30,311 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2025-08-17 20:13:12,229 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 20:22:46,835 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2025-08-17 20:23:32,339 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2025-08-17 20:26:02,861 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2025-08-17 20:26:24,703 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\celery_tasks\main.py changed, reloading.
+INFO 2025-08-17 20:26:26,813 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 20:31:55,243 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 20:31:57,482 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 20:32:29,991 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 20:32:32,404 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 20:34:09,592 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 20:34:11,962 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 20:35:16,441 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 20:35:18,475 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 20:36:16,959 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 20:36:19,110 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 20:36:33,632 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\utils.py changed, reloading.
+INFO 2025-08-17 20:36:35,712 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 20:36:46,794 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\utils.py changed, reloading.
+INFO 2025-08-17 20:36:48,421 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 20:37:16,440 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 20:37:19,551 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 20:38:04,739 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 20:38:06,917 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 20:38:29,367 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 20:38:31,364 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 20:38:51,921 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 20:38:54,095 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 20:39:13,724 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 20:39:15,651 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 20:40:47,262 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2025-08-17 20:42:03,155 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2025-08-17 20:43:08,716 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 20:43:10,727 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 20:43:16,927 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2025-08-17 20:43:54,463 basehttp 212 "PUT /emails/verification/?token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTc1NTQzNDU5NiwiZXhwIjoxNzU1NDM2Mzk2fQ.eyJ1c2VyX2lkIjoxfQ.wZIAGm-M414q2lp86s5adeBQM4YCBDxBAuG-WgI69F8DxLUvnjpFVe3bVDCBjn3J3oK3o0Zj3tJI9wGSOLQ5jA%3E HTTP/1.1" 200 51
+INFO 2025-08-17 20:44:51,018 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 20:44:58,198 basehttp 212 "PUT /emails/verification/?token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTc1NTQzNDU5NiwiZXhwIjoxNzU1NDM2Mzk2fQ.eyJ1c2VyX2lkIjoxfQ.wZIAGm-M414q2lp86s5adeBQM4YCBDxBAuG-WgI69F8DxLUvnjpFVe3bVDCBjn3J3oK3o0Zj3tJI9wGSOLQ5jA%3E HTTP/1.1" 200 51
+WARNING 2025-08-17 20:45:28,808 log 246 Method Not Allowed (GET): /emails/verification/
+WARNING 2025-08-17 20:45:28,812 basehttp 212 "GET /emails/verification/?token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTc1NTQzNDU5NiwiZXhwIjoxNzU1NDM2Mzk2fQ.eyJ1c2VyX2lkIjoxfQ.wZIAGm-M414q2lp86s5adeBQM4YCBDxBAuG-WgI69F8DxLUvnjpFVe3bVDCBjn3J3oK3o0Zj3tJI9wGSOLQ5jA HTTP/1.1" 405 0
+INFO 2025-08-17 20:46:27,810 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\utils.py changed, reloading.
+INFO 2025-08-17 20:46:30,006 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 20:47:00,942 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\utils.py changed, reloading.
+INFO 2025-08-17 20:47:02,620 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 20:47:40,656 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\utils.py changed, reloading.
+INFO 2025-08-17 20:47:42,436 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 20:47:51,853 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\utils.py changed, reloading.
+INFO 2025-08-17 20:47:53,843 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 20:50:13,500 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\utils.py changed, reloading.
+INFO 2025-08-17 20:50:15,612 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 20:50:24,889 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2025-08-17 20:51:54,954 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 20:51:56,775 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 20:52:04,106 basehttp 212 "PUT /emails/verification/?token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTc1NTQzNTAyMywiZXhwIjoxNzU1NDM2ODIzfQ.eyJ1c2VyX2lkIjoxfQ.J5P5xzPBLhsuCwfJ7ElOjzuytWjN4MM_qcxnLc_Da_ZoNQirxWWUBNy9x9IAvkHPI1PYZQf6KRP1q-VK_FEerQ HTTP/1.1" 200 27
+INFO 2025-08-18 00:18:46,743 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-18 00:18:49,497 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-18 00:25:17,393 basehttp 212 "PUT /emails/ HTTP/1.1" 200 45
+INFO 2025-08-18 00:36:30,512 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-18 00:36:50,949 basehttp 212 "PUT /emails/ HTTP/1.1" 200 45
+INFO 2025-08-18 00:36:57,561 basehttp 212 "POST /login/ HTTP/1.1" 200 27
+INFO 2025-08-18 00:37:02,642 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2025-08-18 00:38:57,794 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2025-08-18 00:39:16,101 basehttp 212 "PUT /emails/verification/?token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTc1NTQ0ODczNywiZXhwIjoxNzU1NDUwNTM3fQ.eyJ1c2VyX2lkIjoxfQ.MIQCpgxjqSa4Zs5Py3qcvKc8NzZ7W8GptB0VvYIPupTtIpzz8OIY9hPAvvVfmeZWSmgL8uEDCyaWbh_hw-8GcQ HTTP/1.1" 200 27
+INFO 2025-08-18 00:39:53,634 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2025-08-18 00:41:59,024 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\models.py changed, reloading.
+INFO 2025-08-18 00:42:01,195 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-18 00:44:01,195 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-18 00:44:10,681 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2025-08-18 00:44:29,052 basehttp 212 "PUT /emails/verification/?token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTc1NTQ0OTA1MCwiZXhwIjoxNzU1NDUwODUwfQ.eyJ1c2VyX2lkIjoxfQ.QuEcxBt8XbjvXUuuaQbhLnPYUI-tjw2TDlv_3ZSiB95efMLQ-8PEf0teq_Z46xSVZ_l7Ppsm2nRbDkX-LBZ8UQ HTTP/1.1" 200 27
