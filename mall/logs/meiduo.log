@@ -1445,3 +1445,196 @@ WARNING 2025-08-15 19:02:39,189 basehttp 212 "GET /register.html HTTP/1.1" 404 2
 INFO 2025-08-15 19:04:40,441 basehttp 212 "GET /register HTTP/1.1" 301 0
 WARNING 2025-08-15 19:04:40,457 log 246 Method Not Allowed (GET): /register/
 WARNING 2025-08-15 19:04:40,458 basehttp 212 "GET /register/ HTTP/1.1" 405 0
+INFO 2025-08-15 19:26:35,501 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 19:28:03,004 basehttp 212 "GET /center/ HTTP/1.1" 200 27
+INFO 2025-08-15 19:29:54,005 basehttp 212 "GET /center/ HTTP/1.1" 200 27
+INFO 2025-08-15 19:30:12,513 basehttp 212 "GET /center/ HTTP/1.1" 200 27
+INFO 2025-08-15 19:33:35,166 basehttp 212 "GET /center/ HTTP/1.1" 200 27
+INFO 2025-08-15 19:33:39,703 basehttp 212 "DELETE /logout HTTP/1.1" 301 0
+WARNING 2025-08-15 19:33:39,721 log 246 Method Not Allowed (GET): /logout/
+WARNING 2025-08-15 19:33:39,723 basehttp 212 "GET /logout/ HTTP/1.1" 405 0
+INFO 2025-08-15 19:34:36,902 basehttp 212 "DELETE /logout HTTP/1.1" 301 0
+WARNING 2025-08-15 19:34:36,914 log 246 Method Not Allowed (GET): /logout/
+WARNING 2025-08-15 19:34:36,916 basehttp 212 "GET /logout/ HTTP/1.1" 405 0
+INFO 2025-08-15 19:35:31,402 basehttp 212 "DELETE /logout HTTP/1.1" 301 0
+WARNING 2025-08-15 19:35:31,409 log 246 Method Not Allowed (GET): /logout/
+WARNING 2025-08-15 19:35:31,413 basehttp 212 "GET /logout/ HTTP/1.1" 405 0
+INFO 2025-08-15 19:38:59,921 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-15 19:39:03,352 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-15 19:39:08,269 basehttp 212 "DELETE /logout HTTP/1.1" 301 0
+INFO 2025-08-15 19:39:08,340 basehttp 212 "GET /logout/ HTTP/1.1" 200 27
+INFO 2025-08-15 19:39:15,622 basehttp 212 "GET /center/ HTTP/1.1" 200 45
+INFO 2025-08-15 19:39:49,911 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-15 19:39:51,522 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 16:23:50,963 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 16:26:18,196 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-17 16:28:02,905 log 246 Internal Server Error: /emails
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to 127.0.0.1:8000/emails/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-08-17 16:28:02,928 basehttp 212 "PUT /emails HTTP/1.1" 500 70858
+INFO 2025-08-17 16:28:59,899 basehttp 212 "PUT /emails/ HTTP/1.1" 200 45
+INFO 2025-08-17 16:29:10,191 basehttp 212 "POST /login/ HTTP/1.1" 200 27
+ERROR 2025-08-17 16:29:14,701 log 246 Internal Server Error: /emails/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py", line 125, in put
+    send_mail(
+TypeError: send_mail() missing 1 required positional argument: 'from_email'
+ERROR 2025-08-17 16:29:14,711 basehttp 212 "PUT /emails/ HTTP/1.1" 500 80441
+INFO 2025-08-17 16:30:09,389 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 16:30:11,440 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 16:30:22,803 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2025-08-17 16:33:20,314 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\mall\settings.py changed, reloading.
+INFO 2025-08-17 16:33:22,334 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 16:35:02,252 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\mall\settings.py changed, reloading.
+INFO 2025-08-17 16:35:04,991 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 16:35:13,188 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2025-08-17 16:35:42,868 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 16:35:44,513 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-17 16:35:56,602 log 246 Internal Server Error: /emails/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py", line 125, in put
+    send_mail(
+TypeError: send_mail() missing 1 required positional argument: 'from_email'
+ERROR 2025-08-17 16:35:56,612 basehttp 212 "PUT /emails/ HTTP/1.1" 500 80424
+INFO 2025-08-17 16:39:09,748 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 16:39:11,653 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-17 16:39:16,091 log 246 Internal Server Error: /emails/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py", line 125, in put
+    email = EmailMessage(
+TypeError: __init__() got an unexpected keyword argument 'message'
+ERROR 2025-08-17 16:39:16,100 basehttp 212 "PUT /emails/ HTTP/1.1" 500 80334
+INFO 2025-08-17 16:39:50,930 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 16:39:52,507 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 16:39:57,625 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2025-08-17 16:41:14,513 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\mall\settings.py changed, reloading.
+INFO 2025-08-17 16:41:16,639 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 16:41:22,127 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2025-08-17 16:42:12,306 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\mall\settings.py changed, reloading.
+INFO 2025-08-17 16:42:13,867 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 16:42:18,110 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2025-08-17 16:45:07,260 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2025-08-17 16:56:54,668 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 16:56:57,471 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 17:05:07,453 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 17:05:09,982 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 17:12:34,810 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\utils.py changed, reloading.
+INFO 2025-08-17 17:12:37,242 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 17:13:19,033 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\utils.py changed, reloading.
+INFO 2025-08-17 17:13:20,608 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 17:16:47,673 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\utils.py changed, reloading.
+INFO 2025-08-17 17:16:50,175 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 17:17:31,085 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 17:17:32,855 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 17:17:36,585 basehttp 212 "PUT /emails/ HTTP/1.1" 200 45
+INFO 2025-08-17 17:17:43,222 basehttp 212 "POST /login/ HTTP/1.1" 200 27
+ERROR 2025-08-17 17:17:47,449 log 246 Internal Server Error: /emails/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py", line 126, in put
+    token=generic_email_verify_token(request.user.id)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\utils.py", line 6, in generic_email_verify_token
+    data = serializer.dumps({'user_id': user_id}, expires_in=1800)
+TypeError: dumps() got an unexpected keyword argument 'expires_in'
+ERROR 2025-08-17 17:17:47,459 basehttp 212 "PUT /emails/ HTTP/1.1" 500 83851
+INFO 2025-08-17 19:31:09,769 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-17 19:31:17,274 log 246 Internal Server Error: /emails/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py", line 128, in put
+    email = EmailMessage(
+TypeError: __init__() got an unexpected keyword argument 'html'
+ERROR 2025-08-17 19:31:17,292 basehttp 212 "PUT /emails/ HTTP/1.1" 500 80939
+INFO 2025-08-17 19:34:31,637 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 19:34:33,715 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 19:34:39,890 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2025-08-17 19:44:25,072 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 19:44:27,124 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 19:44:29,981 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2025-08-17 19:47:29,019 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 19:47:31,807 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 19:48:28,434 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 19:48:30,089 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-17 19:48:35,398 log 246 Internal Server Error: /emails/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py", line 130, in put
+    send_mail(
+TypeError: send_mail() missing 1 required positional argument: 'message'
+ERROR 2025-08-17 19:48:35,408 basehttp 212 "PUT /emails/ HTTP/1.1" 500 81637
+INFO 2025-08-17 19:50:00,257 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 19:50:02,586 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 19:50:05,650 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2025-08-17 19:52:09,311 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 19:52:11,393 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 19:52:22,435 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 19:52:23,868 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 19:52:28,849 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2025-08-17 19:53:23,784 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-17 19:53:25,728 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-17 19:53:30,311 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27

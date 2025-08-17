@@ -2,14 +2,19 @@ import json
 import re
 
 from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 from django.views import View
 from django_redis import get_redis_connection
+from django.core.mail import send_mail
 
+from apps.users.utils import generic_email_verify_token
 from libs.captcha.captcha import captcha
 
 from apps.users.models import User
+from mall import settings
+from utils.mixins import LoginRequiredJsonMixin
 
 
 # Create your views here.
@@ -18,12 +23,12 @@ class RegisterView(View):
         body_str=request.body.decode()
         body_dict=json.loads(body_str)
 
-        username = body_dict['username']
-        password = body_dict['password']
-        password2 = body_dict['password2']
-        mobile = body_dict['mobile']
-        sms_code = body_dict['sms_code']
-        allow = body_dict['allow']
+        username = body_dict.get('username')
+        password = body_dict.get('password')
+        password2 = body_dict.get('password2')
+        mobile = body_dict.get('mobile')
+        sms_code = body_dict.get('sms_code')
+        allow = body_dict.get('allow')
 
         if not all([username,password,password2,mobile,sms_code,allow]):
             return JsonResponse({'code':400, 'errmsg':'参数不全'})
@@ -95,6 +100,44 @@ class LogoutView(View):
         response.delete_cookie('username')
 
         return response
+
+# 装饰器、多继承
+
+class CenterView(LoginRequiredJsonMixin, View):
+    def get(self, request):
+        return JsonResponse({'code':0, 'errmsg':'ok'})
+
+class EmailView(LoginRequiredJsonMixin, View):
+    def put(self, request):
+        # similar to post
+        body_str = request.body.decode()
+        body_dict = json.loads(body_str)
+        email = body_dict.get('email')
+        if not email:
+            return JsonResponse({'code':400, 'errmsg':'请输入邮箱'})
+        if not re.match(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$', email):
+            return JsonResponse({'code':400, 'errmsg':'邮箱格式错误'})
+
+        # 保存
+        user=request.user
+        user.email=email
+        user.save()
+
+        # 发送
+        token=generic_email_verify_token(request.user.id)
+        hyperlink=f"<a href='http://www.itcast.cn/?token={token}'>http://www.itcast.cn/?token={token}></a>"
+
+        send_mail(
+            subject='【美多商城】感谢您的使用，请激活邮箱',
+            message=None,
+            from_email=settings.DEFAULT_FROM_EMAIL,
+            recipient_list=[email],
+            html_message='<p>请点击以下链接激活账号（有效期为：此邮件发出后的30分钟）</p>' + hyperlink
+        )
+
+        return JsonResponse({'code':0, 'errmsg':'ok'})
+
+
 
 
 

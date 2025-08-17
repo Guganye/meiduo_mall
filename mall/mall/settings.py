@@ -157,7 +157,14 @@ CACHES = {
 }
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "session"
-
+# --------------------email--------------------------
+EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST='smtp.qq.com'
+EMAIL_PORT=587
+EMAIL_USE_TLS=True
+EMAIL_HOST_USER='3029946904@qq.com'
+EMAIL_HOST_PASSWORD='byonfsvkvlledfhc'
+DEFAULT_FROM_EMAIL='Guganye <3029946904@qq.com>'
 # ---------------------日志--------------------------
 LOGGING = {
     'version': 1,
@@ -199,6 +206,7 @@ LOGGING = {
         },
     }
 }
-
 # ---------------自定义模型替代默认-------------
 AUTH_USER_MODEL = 'users.User'
+# ---------------
+SECRET_KEY='gaudgakwbca'
