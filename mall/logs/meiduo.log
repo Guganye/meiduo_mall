@@ -1707,3 +1707,45 @@ INFO 2025-08-18 00:42:01,195 autoreload 667 Watching for file changes with StatR
 INFO 2025-08-18 00:44:01,195 autoreload 667 Watching for file changes with StatReloader
 INFO 2025-08-18 00:44:10,681 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
 INFO 2025-08-18 00:44:29,052 basehttp 212 "PUT /emails/verification/?token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTc1NTQ0OTA1MCwiZXhwIjoxNzU1NDUwODUwfQ.eyJ1c2VyX2lkIjoxfQ.QuEcxBt8XbjvXUuuaQbhLnPYUI-tjw2TDlv_3ZSiB95efMLQ-8PEf0teq_Z46xSVZ_l7Ppsm2nRbDkX-LBZ8UQ HTTP/1.1" 200 27
+INFO 2025-08-18 00:49:17,730 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\mall\settings.py changed, reloading.
+INFO 2025-08-18 00:49:21,699 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-18 00:51:36,866 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\areas\models.py changed, reloading.
+INFO 2025-08-18 00:51:39,119 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-18 00:52:02,630 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\areas\models.py changed, reloading.
+INFO 2025-08-18 00:52:04,552 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-18 00:53:01,127 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\areas\models.py changed, reloading.
+INFO 2025-08-18 00:53:03,623 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-18 00:59:58,548 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\areas\models.py changed, reloading.
+INFO 2025-08-18 01:00:02,024 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-18 01:00:26,129 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\areas\models.py changed, reloading.
+INFO 2025-08-18 01:00:28,462 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-18 01:01:56,794 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\areas\models.py changed, reloading.
+INFO 2025-08-18 01:01:59,298 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-18 01:03:13,292 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\areas\models.py changed, reloading.
+INFO 2025-08-18 01:03:16,314 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-18 01:05:58,347 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\areas\models.py changed, reloading.
+INFO 2025-08-18 01:06:01,266 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-18 01:24:43,421 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\mall\urls.py changed, reloading.
+INFO 2025-08-18 01:24:45,951 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-18 01:24:57,516 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\areas\views.py changed, reloading.
+INFO 2025-08-18 01:24:59,200 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-18 01:25:02,983 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\areas\views.py changed, reloading.
+INFO 2025-08-18 01:25:04,656 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-18 01:26:47,545 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\areas\views.py changed, reloading.
+INFO 2025-08-18 01:26:49,810 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-18 01:27:05,577 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\areas\views.py changed, reloading.
+INFO 2025-08-18 01:27:07,135 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-18 01:27:15,384 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\areas\views.py changed, reloading.
+INFO 2025-08-18 01:27:17,111 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-18 01:28:10,884 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\areas\views.py changed, reloading.
+INFO 2025-08-18 01:28:12,951 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-18 01:29:37,217 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\areas\views.py changed, reloading.
+INFO 2025-08-18 01:29:40,104 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-18 01:29:43,281 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\areas\views.py changed, reloading.
+INFO 2025-08-18 01:29:44,830 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-18 01:30:13,826 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\areas\views.py changed, reloading.
+INFO 2025-08-18 01:30:16,238 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-18 01:30:24,641 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\areas\views.py changed, reloading.
+INFO 2025-08-18 01:30:26,380 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-18 01:31:19,135 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\areas\views.py changed, reloading.
+INFO 2025-08-18 01:31:21,543 autoreload 667 Watching for file changes with StatReloader
