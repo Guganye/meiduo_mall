@@ -86,7 +86,7 @@ DATABASES = {
         'PORT': 3306,
         'USER': 'root',
         'PASSWORD': '983817379gujinyi',
-        'NAME': 'django',
+        'NAME': 'meiduo_mall',
     }
 }
 

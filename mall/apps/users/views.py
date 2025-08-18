@@ -46,14 +46,17 @@ class RegisterView(View):
             return JsonResponse({'code':400, 'errmsg':'用户名重复'})
 
         try:
-            User.objects.create_user(username=username, password=password, mobile=mobile)
+            user=User.objects.create_user(username=username, password=password, mobile=mobile)
         except Exception as e:
             return JsonResponse({'code':400, 'errmsg':f'{e}'})
 
         # session
         login(request, user)
 
-        return JsonResponse({'code':0, 'errmsg':'ok'})
+        response=JsonResponse({'code':0, 'errmsg':'ok'})
+        response.set_cookie('username', username, max_age=3600*24*7*2)
+
+        return response
 
 class LoginView(View):
     def post(self, request):
