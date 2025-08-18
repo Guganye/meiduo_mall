@@ -18,3 +18,16 @@ class AreaView(View):
             })
 
         return JsonResponse({'code':0, 'errmsg':'ok', 'province_list':province_list})
+
+class SubAreaView(View):
+    def get(self, request, id):
+        area=Area.objects.get(id=id)
+        subareas=area.subs.all()
+        subarea_list=[]
+        for subarea in subareas:
+            subarea_list.append({
+                'id': subarea.id,
+                'name':subarea.name,
+            })
+        return JsonResponse({'code':0, 'errmsg':'ok', 'sub_data':{'subs':subarea_list}})
+
