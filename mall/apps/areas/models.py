@@ -1,7 +1,10 @@
 from django.db import models
 
+from utils.models import BaseModel
+
+
 # Create your models here.
-class Area(models.Model):
+class Area(BaseModel):
     name = models.CharField(max_length=20, verbose_name='名称')
     # 自引用外键关系
     parent = models.ForeignKey('self', on_delete=models.SET_NULL,

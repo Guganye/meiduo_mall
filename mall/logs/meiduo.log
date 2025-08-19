@@ -2257,3 +2257,8 @@ INFO 2025-08-19 14:33:11,018 basehttp 212 "PUT /addresses/2/default/ HTTP/1.1" 2
 INFO 2025-08-19 14:34:36,535 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
 INFO 2025-08-19 14:34:40,177 autoreload 667 Watching for file changes with StatReloader
 INFO 2025-08-19 14:34:43,165 basehttp 212 "PUT /addresses/2/default/ HTTP/1.1" 200 27
+INFO 2025-08-19 20:59:28,672 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\mall\settings.py changed, reloading.
+INFO 2025-08-19 20:59:31,910 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 21:49:14,165 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\models.py changed, reloading.
+INFO 2025-08-19 21:49:16,742 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-20 00:57:35,367 autoreload 667 Watching for file changes with StatReloader

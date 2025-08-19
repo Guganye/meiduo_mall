@@ -3,8 +3,11 @@ import uuid
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+from utils.models import BaseModel
+
+
 # Create your models here.
-class User(AbstractUser):
+class User(BaseModel, AbstractUser):
     id = models.AutoField(primary_key=True)
     mobile = models.CharField(max_length=11, unique=True)
     email_active = models.BooleanField(default=False)
@@ -13,7 +16,7 @@ class User(AbstractUser):
     class Meta:
         db_table = 'tb_users'
 
-class Address(models.Model):
+class Address(BaseModel):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=50, default='')
     user = models.ForeignKey('User', on_delete=models.CASCADE, related_name='addresses')
