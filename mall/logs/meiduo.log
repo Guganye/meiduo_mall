@@ -1843,3 +1843,417 @@ INFO 2025-08-18 21:22:34,931 basehttp 212 "GET /areas HTTP/1.1" 301 0
 INFO 2025-08-18 21:22:34,948 basehttp 212 "GET /areas/ HTTP/1.1" 200 92
 INFO 2025-08-18 21:27:15,225 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\areas\views.py changed, reloading.
 INFO 2025-08-18 21:27:18,177 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 00:28:54,686 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 00:32:05,474 basehttp 212 "GET /areas HTTP/1.1" 301 0
+INFO 2025-08-19 00:32:05,507 basehttp 212 "GET /areas/ HTTP/1.1" 200 92
+INFO 2025-08-19 00:34:34,499 basehttp 212 "GET /areas HTTP/1.1" 301 0
+INFO 2025-08-19 00:34:34,738 basehttp 212 "GET /areas/ HTTP/1.1" 200 138
+INFO 2025-08-19 00:34:46,922 basehttp 212 "GET /areas/120100 HTTP/1.1" 301 0
+INFO 2025-08-19 00:34:46,964 basehttp 212 "GET /areas/120100/ HTTP/1.1" 200 97
+INFO 2025-08-19 00:49:05,273 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\models.py changed, reloading.
+INFO 2025-08-19 00:49:08,028 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 00:49:25,449 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\models.py changed, reloading.
+INFO 2025-08-19 00:49:27,905 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 00:49:38,710 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\models.py changed, reloading.
+INFO 2025-08-19 00:49:40,696 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 00:56:29,429 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\models.py changed, reloading.
+INFO 2025-08-19 00:56:32,712 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 00:56:54,709 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\models.py changed, reloading.
+INFO 2025-08-19 00:56:56,624 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:01:58,053 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\models.py changed, reloading.
+INFO 2025-08-19 01:02:01,270 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:11:05,588 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\areas\models.py changed, reloading.
+INFO 2025-08-19 01:11:08,163 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:12:04,343 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\models.py changed, reloading.
+INFO 2025-08-19 01:12:07,082 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:15:01,928 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\models.py changed, reloading.
+INFO 2025-08-19 01:15:04,964 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:16:09,480 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\models.py changed, reloading.
+INFO 2025-08-19 01:16:12,503 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:17:02,665 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\models.py changed, reloading.
+INFO 2025-08-19 01:17:04,794 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:21:38,325 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 01:21:40,504 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:23:17,957 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 01:23:22,490 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:23:35,222 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 01:23:37,264 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:24:06,128 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 01:24:08,794 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:24:27,288 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 01:24:29,863 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:25:08,627 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 01:25:11,321 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:25:41,727 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 01:25:44,880 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:26:12,426 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 01:26:14,552 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:26:23,864 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 01:26:25,732 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:31:39,931 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 01:31:43,097 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:32:00,943 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 01:32:03,357 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:33:15,942 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\models.py changed, reloading.
+INFO 2025-08-19 01:33:18,736 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:33:59,832 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\models.py changed, reloading.
+INFO 2025-08-19 01:34:01,619 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:35:13,562 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 01:35:15,459 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:36:29,446 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\models.py changed, reloading.
+INFO 2025-08-19 01:36:31,070 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:37:28,127 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 01:37:30,506 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:38:45,998 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 01:38:48,284 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:41:33,548 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 01:41:36,695 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:42:03,058 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 01:42:05,138 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 01:44:26,789 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 12:15:45,750 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 12:20:32,528 basehttp 212 "POST /addresses/create/ HTTP/1.1" 200 45
+ERROR 2025-08-19 12:21:11,306 log 246 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\cache.py", line 29, in _decorator
+    return method(self, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\cache.py", line 138, in has_key
+    return self.client.has_key(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\client\default.py", line 740, in has_key
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 10060 connecting to 192.168.234.128:6379. ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py", line 83, in post
+    login(request, user)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\auth\__init__.py", line 118, in login
+    request.session.cycle_key()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 304, in cycle_key
+    self.create()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\sessions\backends\cache.py", line 42, in create
+    self._session_key = self._get_new_session_key()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 150, in _get_new_session_key
+    if not self.exists(session_key):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\sessions\backends\cache.py", line 73, in exists
+    bool(session_key) and (self.cache_key_prefix + session_key) in self._cache
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\cache\backends\base.py", line 299, in __contains__
+    return self.has_key(key)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\cache.py", line 36, in _decorator
+    raise e.__cause__  # noqa: B904
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\client\default.py", line 738, in has_key
+    return client.exists(key) == 1
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 1736, in exists
+    return self.execute_command("EXISTS", *names, keys=names)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 1530, in get_connection
+    connection.connect()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 391, in connect_check_health
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10060 connecting to 192.168.234.128:6379. ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£.
+ERROR 2025-08-19 12:21:11,331 basehttp 212 "POST /login/ HTTP/1.1" 500 151920
+ERROR 2025-08-19 12:23:20,528 log 246 Internal Server Error: /register/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\cache.py", line 29, in _decorator
+    return method(self, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\cache.py", line 138, in has_key
+    return self.client.has_key(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\client\default.py", line 740, in has_key
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 10060 connecting to 192.168.234.128:6379. ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py", line 54, in post
+    login(request, user)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\auth\__init__.py", line 118, in login
+    request.session.cycle_key()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 304, in cycle_key
+    self.create()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\sessions\backends\cache.py", line 42, in create
+    self._session_key = self._get_new_session_key()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 150, in _get_new_session_key
+    if not self.exists(session_key):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\sessions\backends\cache.py", line 73, in exists
+    bool(session_key) and (self.cache_key_prefix + session_key) in self._cache
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\cache\backends\base.py", line 299, in __contains__
+    return self.has_key(key)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\cache.py", line 36, in _decorator
+    raise e.__cause__  # noqa: B904
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django_redis\client\default.py", line 738, in has_key
+    return client.exists(key) == 1
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\commands\core.py", line 1736, in exists
+    return self.execute_command("EXISTS", *names, keys=names)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 1530, in get_connection
+    connection.connect()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\redis\connection.py", line 391, in connect_check_health
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10060 connecting to 192.168.234.128:6379. ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£.
+ERROR 2025-08-19 12:23:20,579 basehttp 212 "POST /register/ HTTP/1.1" 500 153258
+INFO 2025-08-19 12:24:14,707 basehttp 212 "POST /register/ HTTP/1.1" 200 57
+INFO 2025-08-19 12:24:37,344 basehttp 212 "POST /register/ HTTP/1.1" 200 27
+INFO 2025-08-19 12:24:50,421 basehttp 212 "POST /login/ HTTP/1.1" 200 27
+ERROR 2025-08-19 12:25:05,903 log 246 Internal Server Error: /addresses/create/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py", line 189, in post
+    address=Address.objects.create(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\query.py", line 656, in create
+    obj = self.model(**kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\base.py", line 567, in __init__
+    raise TypeError(
+TypeError: Address() got unexpected keyword arguments: 'place22'
+ERROR 2025-08-19 12:25:05,915 basehttp 212 "POST /addresses/create/ HTTP/1.1" 500 97394
+INFO 2025-08-19 12:26:14,961 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 12:26:17,279 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-19 12:26:21,460 log 246 Internal Server Error: /addresses/create/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.IntegrityError: (1048, "Column 'user_id' cannot be null")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py", line 189, in post
+    address=Address.objects.create(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.IntegrityError: (1048, "Column 'user_id' cannot be null")
+ERROR 2025-08-19 12:26:21,499 basehttp 212 "POST /addresses/create/ HTTP/1.1" 500 197625
+INFO 2025-08-19 12:27:04,150 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 12:27:06,109 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 12:27:51,381 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 12:27:52,910 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 12:27:57,303 basehttp 212 "POST /addresses/create/ HTTP/1.1" 200 272
+INFO 2025-08-19 12:29:01,037 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 12:29:03,029 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 12:35:02,558 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 12:35:04,526 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 12:35:12,813 basehttp 212 "POST /addresses/create/ HTTP/1.1" 200 282
+INFO 2025-08-19 12:41:15,299 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 12:41:17,656 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 12:43:25,387 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 12:43:27,723 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 12:51:35,714 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\utils.py changed, reloading.
+INFO 2025-08-19 12:51:39,360 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 12:51:57,387 basehttp 212 "GET /addresses/ HTTP/1.1" 200 530
+INFO 2025-08-19 12:53:18,365 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 12:53:21,452 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 12:57:09,490 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 12:57:12,811 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 13:00:09,245 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 13:00:12,205 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 13:55:07,174 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 13:55:09,750 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 13:57:49,210 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 13:57:51,693 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 13:58:02,292 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 13:58:08,172 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 13:58:09,730 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 13:58:30,034 basehttp 212 "DELETE /addresses/1 HTTP/1.1" 301 0
+WARNING 2025-08-19 13:58:30,062 log 246 Method Not Allowed (GET): /addresses/1/
+WARNING 2025-08-19 13:58:30,064 basehttp 212 "GET /addresses/1/ HTTP/1.1" 405 0
+INFO 2025-08-19 13:58:53,241 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 13:58:55,030 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 13:58:57,342 basehttp 212 "DELETE /addresses/1 HTTP/1.1" 301 0
+ERROR 2025-08-19 13:59:18,480 log 246 Internal Server Error: /addresses/1/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py", line 233, in get
+    address.save()
+AttributeError: 'QuerySet' object has no attribute 'save'
+ERROR 2025-08-19 13:59:18,489 basehttp 212 "GET /addresses/1/ HTTP/1.1" 500 76319
+INFO 2025-08-19 14:00:57,901 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 14:01:01,591 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 14:01:02,805 basehttp 212 "GET /addresses/ HTTP/1.1" 200 45
+INFO 2025-08-19 14:01:09,724 basehttp 212 "POST /login/ HTTP/1.1" 200 27
+INFO 2025-08-19 14:01:21,311 basehttp 212 "GET /addresses/ HTTP/1.1" 200 548
+INFO 2025-08-19 14:01:25,921 basehttp 212 "DELETE /addresses/1 HTTP/1.1" 301 0
+INFO 2025-08-19 14:01:25,941 basehttp 212 "GET /addresses/1/ HTTP/1.1" 200 27
+INFO 2025-08-19 14:08:41,658 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 14:08:45,355 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 14:10:30,935 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 14:10:33,768 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 14:17:44,017 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 14:17:47,871 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 14:22:30,762 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 14:22:33,060 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 14:24:24,037 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\urls.py changed, reloading.
+INFO 2025-08-19 14:24:26,054 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 14:24:29,836 basehttp 212 "GET /addresses/ HTTP/1.1" 200 295
+WARNING 2025-08-19 14:24:51,114 log 246 Not Found: /addresses/2
+WARNING 2025-08-19 14:24:51,117 basehttp 212 "PUT /addresses/2 HTTP/1.1" 404 4433
+INFO 2025-08-19 14:25:41,108 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\urls.py changed, reloading.
+INFO 2025-08-19 14:25:43,086 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 14:25:51,305 basehttp 212 "PUT /addresses/2 HTTP/1.1" 200 291
+INFO 2025-08-19 14:26:01,241 basehttp 212 "GET /addresses/ HTTP/1.1" 200 295
+ERROR 2025-08-19 14:27:36,877 log 246 Internal Server Error: /addresses/2/default
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to 127.0.0.1:8000/addresses/2/default/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-08-19 14:27:36,885 basehttp 212 "PUT /addresses/2/default HTTP/1.1" 500 72010
+INFO 2025-08-19 14:28:16,207 basehttp 212 "PUT /addresses/2/default/ HTTP/1.1" 200 27
+INFO 2025-08-19 14:30:43,861 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 14:30:45,866 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-19 14:30:49,010 log 246 Internal Server Error: /addresses/2/default/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py", line 285, in put
+    'address': address.user.address.receiver,
+AttributeError: 'User' object has no attribute 'address'
+ERROR 2025-08-19 14:30:49,061 basehttp 212 "PUT /addresses/2/default/ HTTP/1.1" 500 80712
+INFO 2025-08-19 14:31:43,449 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 14:31:45,462 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 14:31:48,252 basehttp 212 "PUT /addresses/2/default/ HTTP/1.1" 200 90
+INFO 2025-08-19 14:32:17,928 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 14:32:21,574 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 14:32:39,225 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 14:32:41,144 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-19 14:32:43,420 log 246 Internal Server Error: /addresses/2/default/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py", line 284, in put
+    user=User.objects.get(default_address=address)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+apps.users.models.User.DoesNotExist: User matching query does not exist.
+ERROR 2025-08-19 14:32:43,437 basehttp 212 "PUT /addresses/2/default/ HTTP/1.1" 500 89267
+INFO 2025-08-19 14:33:08,381 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 14:33:10,316 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 14:33:11,018 basehttp 212 "PUT /addresses/2/default/ HTTP/1.1" 200 90
+INFO 2025-08-19 14:34:36,535 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-19 14:34:40,177 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-19 14:34:43,165 basehttp 212 "PUT /addresses/2/default/ HTTP/1.1" 200 27

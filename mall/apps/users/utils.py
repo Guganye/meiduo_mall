@@ -15,6 +15,22 @@ def check_verify_token(token):
         return None
     return result.get('user_id')
 
+def address_to_dict(address):
+    address_dict = {
+        'id': address.id,
+        'title': address.title,
+        'user': address.user.username,
+        'receiver': address.receiver,
+        'province': address.province.name,
+        'city': address.city.name,
+        'district': address.district.name,
+        'place': address.place,
+        'mobile': address.mobile,
+        'tel': address.tel,
+        'email': address.email
+    }
+    return address_dict
+
 if __name__ == '__main__':
     token=generic_email_verify_token(123)
     print(token)

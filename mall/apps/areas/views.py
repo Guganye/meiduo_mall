@@ -1,4 +1,5 @@
 from django.core.cache import cache # settings.CACHES.get("default")
+# 应用在不经常变动的数据上
 from django.http import JsonResponse
 from django.views import View
 

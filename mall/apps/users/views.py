@@ -8,11 +8,11 @@ from django.shortcuts import render
 from django.views import View
 from django_redis import get_redis_connection
 
-from apps.users.utils import generic_email_verify_token, check_verify_token
+from apps.users.utils import generic_email_verify_token, check_verify_token, address_to_dict
 
 from libs.captcha.captcha import captcha
 
-from apps.users.models import User
+from apps.users.models import User, Address
 from mall import settings
 from utils.mixins import LoginRequiredJsonMixin
 
@@ -38,7 +38,7 @@ class RegisterView(View):
             return JsonResponse({'code':400, 'errmsg':'密码不符合规则'})
         if not password == password2:
             return JsonResponse({'code':400, 'errmsg':'两次密码需一样'})
-        if not re.match('^1[3-9]\d{9}$', mobile):
+        if not re.match('1[3-9]\d{9}', mobile):
             return JsonResponse({'code':400, 'errmsg':'请输入正确的电话号码'})
 
         user = User.objects.filter(username=username)
@@ -167,6 +167,120 @@ class EmailVerifyView(View):
 
         return JsonResponse({'code':0, 'errmsg':'ok'})
 
+class AddressCreateView(LoginRequiredJsonMixin, View):
+    def post(self, request):
+        data = json.loads(request.body.decode())
+        receiver=data.get('receiver')
+        province_id=data.get('province_id')
+        city_id=data.get('city_id')
+        district_id=data.get('district_id')
+        place=data.get('place')
+        mobile=data.get('mobile')
+        tel=data.get('tel')
+        email=data.get('email')
+
+        user=request.user
+
+        # 验证
+        if not all([receiver, province_id, city_id, district_id, place, mobile]):
+            return JsonResponse({'code':400, 'errmsg':'请填写必填项'})
+        if not (2<=len(receiver)<=50):
+            return JsonResponse({'code':400, 'errmsg':'收货人姓名应为2-50个字符'})
+        if not (2<=len(receiver)<=50):
+            return JsonResponse({'code':400, 'errmsg':'详细地址应为2-50个字符'})
+        if not re.match('1[3-9]\d{9}', mobile):
+            return JsonResponse({'code': 400, 'errmsg': '手机号格式不正确'})
+        if tel and not re.match('(0\d{2,3}-)?\d{7,8}', tel):
+            return JsonResponse({'code': 400, 'errmsg': '固定电话格式不正确'})
+        if email and not re.match('[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}', email):
+            return JsonResponse({'code': 400, 'errmsg': '邮箱格式不正确'})
+
+        # save
+        address=Address.objects.create(
+            title=receiver,
+            user=user,
+            receiver=receiver,
+            province_id=province_id,
+            city_id=city_id,
+            district_id=district_id,
+            place=place,
+            mobile=mobile,
+            tel=tel,
+            email=email
+        )
+
+        # return
+        address_dict=address_to_dict(address)
+
+        return JsonResponse({'code':0, 'errmsg':'ok', 'address':address_dict})
+
+class AddressChangeView(LoginRequiredJsonMixin, View):
+    def put(self, request, id):
+        data = json.loads(request.body.decode())
+        receiver = data.get('receiver')
+        province_id = data.get('province_id')
+        city_id = data.get('city_id')
+        district_id = data.get('district_id')
+        place = data.get('place')
+        mobile = data.get('mobile')
+        tel = data.get('tel')
+        email = data.get('email')
+
+        user = request.user
+
+        # 验证
+        if not all([receiver, province_id, city_id, district_id, place, mobile]):
+            return JsonResponse({'code': 400, 'errmsg': '请填写必填项'})
+        if not (2 <= len(receiver) <= 50):
+            return JsonResponse({'code': 400, 'errmsg': '收货人姓名应为2-50个字符'})
+        if not (2 <= len(receiver) <= 50):
+            return JsonResponse({'code': 400, 'errmsg': '详细地址应为2-50个字符'})
+        if not re.match('1[3-9]\d{9}', mobile):
+            return JsonResponse({'code': 400, 'errmsg': '手机号格式不正确'})
+        if tel and not re.match('(0\d{2,3}-)?\d{7,8}', tel):
+            return JsonResponse({'code': 400, 'errmsg': '固定电话格式不正确'})
+        if email and not re.match('[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}', email):
+            return JsonResponse({'code': 400, 'errmsg': '邮箱格式不正确'})
+
+        address=Address.objects.get(id=id)
+        address.receiver=receiver
+        address.province_id=province_id
+        address.city_id=city_id
+        address.district_id=district_id
+        address.place=place
+        address.mobile=mobile
+        address.tel=tel
+        address.email=email
+        address.save()
+
+        address_dict = address_to_dict(address)
+
+        return JsonResponse({'code': 0, 'errmsg': 'ok', 'address': address_dict})
+
+    def delete(self, request, id):
+        address=Address.objects.get(id=id)
+        address.is_deleted=True
+        address.save()
+        return JsonResponse({'code':0, 'errmsg':'ok'})
+
+class AddressGetView(LoginRequiredJsonMixin,View):
+    def get(self, request):
+        user=request.user
+        addresses=Address.objects.filter(user=user, is_deleted=False)
+        address_list=[]
+        for address in addresses:
+            address_list.append(
+                address_to_dict(address)
+            )
+
+        return JsonResponse({'code':0, 'errmsg':'ok', 'addresses':address_list})
+
+class AddressDefaultView(LoginRequiredJsonMixin,View):
+    def put(self, request, id):
+        address=Address.objects.get(id=id)
+        address.user.default_address=address
+        address.user.save()
+        return JsonResponse({'code':0, 'errmsg':'ok'})
 
 
 

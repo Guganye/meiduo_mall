@@ -11,9 +11,9 @@ class Area(models.Model):
     # province = Area.objects.create(name="河北省")
     # city = Area.objects.create(name="石家庄市", parent=province)
     #
-    # province.subs.all()  # 返回 [<Area: 石家庄市>]
+    # province.subs.all()  # 返回 [<Area: 石家庄市>对象...]
     #
-    # city.parent  # 返回 <Area: 河北省>
+    # city.parent  # 返回 <Area: 河北省>对象
 
     # related_name 默认是关联模型类名小写_set area_set
 
