@@ -2262,3 +2262,200 @@ INFO 2025-08-19 20:59:31,910 autoreload 667 Watching for file changes with StatR
 INFO 2025-08-19 21:49:14,165 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\models.py changed, reloading.
 INFO 2025-08-19 21:49:16,742 autoreload 667 Watching for file changes with StatReloader
 INFO 2025-08-20 00:57:35,367 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-20 16:45:47,905 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-20 16:45:55,176 basehttp 212 "POST /register/ HTTP/1.1" 200 27
+INFO 2025-08-20 17:46:16,748 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-20 17:48:32,091 log 246 Internal Server Error: /register/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py", line 50, in post
+    redis_sms_code=redis_cli.get('sms_%s',sms_code)
+TypeError: get() takes 2 positional arguments but 3 were given
+ERROR 2025-08-20 17:48:32,106 basehttp 212 "POST /register/ HTTP/1.1" 500 77997
+INFO 2025-08-20 17:49:48,905 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-20 17:49:50,919 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-20 17:50:42,275 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-20 17:50:43,216 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-20 17:50:47,929 basehttp 212 "POST /register/ HTTP/1.1" 200 69
+INFO 2025-08-20 17:50:55,147 basehttp 212 "GET /image_codes/123/ HTTP/1.1" 200 1286
+INFO 2025-08-20 17:51:06,525 basehttp 212 "GET /sms_codes/18126106878?image_code=khky&image_code_id=123 HTTP/1.1" 301 0
+INFO 2025-08-20 17:51:06,852 basehttp 212 "GET /sms_codes/18126106878/?image_code=khky&image_code_id=123 HTTP/1.1" 200 27
+ERROR 2025-08-20 17:52:20,456 log 246 Internal Server Error: /register/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py", line 53, in post
+    if redis_sms_code.decode()!=sms_code.decode():
+AttributeError: 'str' object has no attribute 'decode'
+ERROR 2025-08-20 17:52:20,462 basehttp 212 "POST /register/ HTTP/1.1" 500 78302
+INFO 2025-08-20 17:52:52,733 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-20 17:52:53,568 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-20 17:52:54,597 log 246 Internal Server Error: /register/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py", line 53, in post
+    if redis_sms_code!=sms_code.decode():
+AttributeError: 'str' object has no attribute 'decode'
+ERROR 2025-08-20 17:52:54,606 basehttp 212 "POST /register/ HTTP/1.1" 500 78228
+INFO 2025-08-20 17:53:14,983 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\users\views.py changed, reloading.
+INFO 2025-08-20 17:53:15,713 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-20 17:53:18,580 basehttp 212 "POST /register/ HTTP/1.1" 200 63
+INFO 2025-08-20 17:53:26,202 basehttp 212 "POST /register/ HTTP/1.1" 200 27
+INFO 2025-08-20 17:54:45,994 basehttp 212 "PUT /emails/ HTTP/1.1" 200 27
+INFO 2025-08-21 02:19:46,049 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\models.py changed, reloading.
+INFO 2025-08-21 02:19:51,104 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 02:28:23,562 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\models.py changed, reloading.
+INFO 2025-08-21 02:28:25,864 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 02:41:42,666 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\models.py changed, reloading.
+INFO 2025-08-21 02:41:45,009 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 02:42:34,063 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\models.py changed, reloading.
+INFO 2025-08-21 02:42:36,042 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 02:43:50,504 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\models.py changed, reloading.
+INFO 2025-08-21 02:43:52,979 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 02:44:28,236 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\models.py changed, reloading.
+INFO 2025-08-21 02:44:29,809 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 02:49:46,313 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\models.py changed, reloading.
+INFO 2025-08-21 02:49:48,716 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 02:51:50,662 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\models.py changed, reloading.
+INFO 2025-08-21 02:51:52,984 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 11:27:40,772 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\models.py changed, reloading.
+INFO 2025-08-21 11:27:43,509 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 11:31:13,973 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\models.py changed, reloading.
+INFO 2025-08-21 11:31:16,206 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 11:32:53,722 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\models.py changed, reloading.
+INFO 2025-08-21 11:32:57,090 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 11:34:10,594 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\models.py changed, reloading.
+INFO 2025-08-21 11:34:13,175 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 11:35:59,862 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\models.py changed, reloading.
+INFO 2025-08-21 11:36:01,770 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 11:36:29,828 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\models.py changed, reloading.
+INFO 2025-08-21 11:36:32,941 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 11:43:43,953 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\models.py changed, reloading.
+INFO 2025-08-21 11:43:45,899 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 13:53:29,017 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 13:54:15,491 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\mall\settings.py changed, reloading.
+INFO 2025-08-21 13:54:17,301 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 14:01:58,088 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-21 14:02:27,994 log 246 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\content\views.py", line 14, in get
+    categories=get_categories()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\content\utils.py", line 17, in get_categories
+    'url': cat1.url
+AttributeError: 'GoodsCategory' object has no attribute 'url'
+ERROR 2025-08-21 14:02:28,002 basehttp 212 "GET /index/ HTTP/1.1" 500 79548
+INFO 2025-08-21 14:07:29,625 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\content\utils.py changed, reloading.
+INFO 2025-08-21 14:07:31,479 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 14:08:08,635 basehttp 212 "GET /index/ HTTP/1.1" 200 442
+INFO 2025-08-21 14:15:12,136 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\mall\urls.py changed, reloading.
+INFO 2025-08-21 14:15:14,739 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 14:17:16,307 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\contents\views.py changed, reloading.
+INFO 2025-08-21 14:17:18,965 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 14:19:10,040 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\contents\urls.py changed, reloading.
+INFO 2025-08-21 14:19:11,789 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 14:19:44,570 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-21 14:19:45,946 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 14:20:17,516 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\contents\urls.py changed, reloading.
+INFO 2025-08-21 14:20:18,913 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 15:11:02,319 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-21 15:11:04,408 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 15:11:33,773 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-21 15:11:35,846 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 15:15:42,038 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-21 15:15:44,423 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 15:18:31,173 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-21 15:18:33,284 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 15:18:52,481 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-21 15:18:54,513 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 15:22:40,203 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\utils.py changed, reloading.
+INFO 2025-08-21 15:22:42,386 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 15:23:03,051 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\utils.py changed, reloading.
+INFO 2025-08-21 15:23:04,724 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 15:23:28,128 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\utils.py changed, reloading.
+INFO 2025-08-21 15:23:30,479 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 15:23:49,990 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\utils.py changed, reloading.
+INFO 2025-08-21 15:23:51,323 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 15:27:10,694 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-21 15:27:12,777 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 15:28:10,719 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-21 15:28:12,457 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 15:30:35,908 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-21 15:30:37,988 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 15:31:18,820 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-21 15:31:20,471 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 15:32:08,899 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-21 15:32:10,800 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 15:33:38,518 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-21 15:33:40,304 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-21 15:48:10,085 log 246 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py", line 12, in get
+    categories=get_categories()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\utils.py", line 23, in get_categories
+    cat3.sub_cats.append(cat3)
+AttributeError: 'GoodsCategory' object has no attribute 'sub_cats'
+ERROR 2025-08-21 15:48:10,118 basehttp 212 "GET /index/ HTTP/1.1" 500 80477
+INFO 2025-08-21 15:48:59,033 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\utils.py changed, reloading.
+INFO 2025-08-21 15:49:00,970 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 15:49:13,424 basehttp 212 "GET /index/ HTTP/1.1" 200 1122
+INFO 2025-08-21 16:25:41,078 basehttp 212 "GET /index/ HTTP/1.1" 200 1307
+INFO 2025-08-21 16:29:46,215 basehttp 212 "POST /addresses/create/ HTTP/1.1" 200 45
+INFO 2025-08-21 18:22:37,276 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 18:22:51,033 basehttp 212 "POST /addresses/create/ HTTP/1.1" 200 45
+INFO 2025-08-21 18:23:40,902 basehttp 212 "POST /login/ HTTP/1.1" 200 27
+INFO 2025-08-21 18:23:46,132 basehttp 212 "POST /addresses/create/ HTTP/1.1" 200 291
+INFO 2025-08-21 19:24:42,441 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\models.py changed, reloading.
+INFO 2025-08-21 19:24:44,331 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 19:40:55,212 basehttp 212 "GET /index/ HTTP/1.1" 200 1307
+INFO 2025-08-21 19:49:19,888 basehttp 212 "GET /index/ HTTP/1.1" 200 1307
+INFO 2025-08-21 19:50:14,237 basehttp 212 "GET /index/ HTTP/1.1" 200 1307
+INFO 2025-08-21 19:53:33,982 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-21 19:53:36,193 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 19:53:38,509 basehttp 212 "GET /index/ HTTP/1.1" 200 43
+INFO 2025-08-21 19:54:12,594 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-21 19:54:14,167 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 19:54:22,319 basehttp 212 "GET /index/ HTTP/1.1" 200 43
+INFO 2025-08-21 19:55:05,607 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-21 19:55:07,603 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-21 19:55:08,516 basehttp 212 "GET /index/ HTTP/1.1" 200 1307
+INFO 2025-08-21 19:56:30,875 basehttp 212 "GET /index/ HTTP/1.1" 200 5300
+INFO 2025-08-21 19:59:48,521 basehttp 212 "GET /index/ HTTP/1.1" 200 4029
+INFO 2025-08-21 20:00:20,793 basehttp 212 "GET /index/ HTTP/1.1" 200 5300
+INFO 2025-08-21 20:01:21,130 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-21 20:01:23,091 autoreload 667 Watching for file changes with StatReloader

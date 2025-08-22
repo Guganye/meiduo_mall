@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'apps.users',
     'apps.verifications',
     'apps.areas',
-    'apps.goods'
+    'apps.goods',
+    'apps.contents'
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'mall.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

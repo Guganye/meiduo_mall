@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    {% for group in categories.values %}
+    <li>
+        <div>
+            {% for channel in group.channels %}
+                <a href="{{ channel.url }}">{{ channel.name }}</a>
+            {% endfor %}
+        </div>
+        <div>
+            {% for cat2 in group.sub_cats %}
+            <div>
+                <div style="color: gray">
+                    {{ cat2.name }}
+                </div>
+                <div style="color: aqua">
+                    {% for cat3 in cat2.sub_cats %}
+                    <div>
+                        {{ cat3.name }}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+
+<ul>
+    <div style="color: blueviolet">banners</div>
+    <div>
+        {% for banner in contents.banners %}
+            <div>
+                <a href="{{ banner.image.sku.url }}">
+                    <img src="{{ banner.image.image }}">
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</ul>
+<ul>
+    <div style="color: blueviolet">flash_news</div>
+    <div>
+        {% for flash_new in contents.flash_news %}
+            <div>
+                <a href="{{ flash_new.sku.url }}">
+                    {{ flash_new.content }}
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</ul>
+
+</body>
+</html>

@@ -3,6 +3,7 @@ import re
 
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.db.models import Q
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 from django.views import View
@@ -41,9 +42,16 @@ class RegisterView(View):
         if not re.match('1[3-9]\d{9}', mobile):
             return JsonResponse({'code':400, 'errmsg':'请输入正确的电话号码'})
 
-        user = User.objects.filter(username=username)
+        user = User.objects.filter(Q(username=username)|Q(mobile=mobile))
         if user:
-            return JsonResponse({'code':400, 'errmsg':'用户名重复'})
+            return JsonResponse({'code':400, 'errmsg':'用户名或电话重复'})
+
+        redis_cli=get_redis_connection('code')
+        redis_sms_code=redis_cli.get('sms_%s'%mobile)
+        if redis_sms_code is None:
+            return JsonResponse({'code':400, 'errmsg':'请先发送验证码'})
+        if redis_sms_code.decode()!=sms_code:
+            return JsonResponse({'code':400, 'errmsg':'验证码不正确'})
 
         try:
             user=User.objects.create_user(username=username, password=password, mobile=mobile)

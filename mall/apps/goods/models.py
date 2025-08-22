@@ -1,3 +1,4 @@
+from django.core.exceptions import ValidationError
 from django.db import models
 
 from utils.models import BaseModel
@@ -8,7 +9,7 @@ from utils.models import BaseModel
 # sku（库存量单位）是库存进出计量的单位，是物理上不可分割的最小库存单位------一款产品
 class GoodsCategory(BaseModel):
     name=models.CharField(max_length=10)
-    parent=models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE)
+    parent=models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE, related_name='subs')
 
     class Meta:
         db_table = 'tb_goods_category'
@@ -31,7 +32,7 @@ class GoodsChannelGroup(BaseModel):
 class GoodsChannel(BaseModel):
     group=models.ForeignKey('GoodsChannelGroup', on_delete=models.CASCADE)
     category=models.ForeignKey('GoodsCategory', on_delete=models.CASCADE)
-    url=models.CharField(max_length=200, verbose_name='频道页面链接')
+    url=models.CharField(max_length=200, verbose_name='频道页面链接') # 也可以当作是一级类别链接，为什么呢，因为group只装一级标题
     sequence=models.IntegerField(verbose_name='组内顺序')
 
     class Meta:
@@ -75,8 +76,8 @@ class SPU(BaseModel):
 class SKU(BaseModel):
     name=models.CharField(max_length=50)
     caption=models.CharField(max_length=100, verbose_name='副标题')
-    spu=models.ForeignKey('SPU', on_delete=models.CASCADE, verbose_name='商品')
-    category=models.ForeignKey('GoodsCategory', on_delete=models.PROTECT, verbose_name='从属类别')
+    url=models.CharField(max_length=200, default='',verbose_name='商品链接')
+    spu=models.ForeignKey('SPU', on_delete=models.CASCADE, verbose_name='类别')
     price=models.DecimalField(max_digits=10, decimal_places=2, verbose_name='单价')
     cost_price=models.DecimalField(max_digits=10, decimal_places=2, verbose_name='进价')
     market_price=models.DecimalField(max_digits=10, decimal_places=2, verbose_name='市场价')
@@ -138,3 +139,8 @@ class SKUSpecification(BaseModel):
         db_table = 'tb_sku_specification'
         verbose_name='sku规格'
         verbose_name_plural=verbose_name
+
+
+
+
+
