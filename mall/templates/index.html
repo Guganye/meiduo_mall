@@ -39,7 +39,7 @@
         {% for banner in contents.banners %}
             <div>
                 <a href="{{ banner.image.sku.url }}">
-                    <img src="{{ banner.image.image }}">
+                    <img src="{{ banner.image.image.url }}">
                 </a>
             </div>
         {% endfor %}

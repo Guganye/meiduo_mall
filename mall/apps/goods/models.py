@@ -61,6 +61,7 @@ class SPU(BaseModel):
     category1=models.ForeignKey('GoodsCategory', on_delete=models.PROTECT, related_name='cat1_spu', verbose_name='从属类别1')
     category2=models.ForeignKey('GoodsCategory', on_delete=models.PROTECT, related_name='cat2_spu', verbose_name='从属类别2')
     category3=models.ForeignKey('GoodsCategory', on_delete=models.PROTECT, related_name='cat3_spu', verbose_name='从属类别3')
+    category=models.ForeignKey('GoodsCategory', on_delete=models.PROTECT, related_name='cat', verbose_name='类别')
     sales=models.IntegerField(default=0)
     comments=models.IntegerField(default=0)
     desc_detail=models.TextField(default='', verbose_name='详细介绍')
@@ -85,8 +86,7 @@ class SKU(BaseModel):
     sales=models.IntegerField(default=0)
     comments=models.IntegerField(default=0)
     is_launched=models.BooleanField(default=True, verbose_name='是否上架销售')
-    default_image=models.ImageField(max_length=200, default='', null=True, blank=True)
-
+    default_image = models.ForeignKey('SKUImage',on_delete=models.SET_NULL,null=True,blank=True,related_name='default')
     class Meta:
         db_table = 'tb_sku'
         verbose_name='商品sku'
@@ -94,7 +94,7 @@ class SKU(BaseModel):
     # sku 一款产品
 
 class SKUImage(BaseModel):
-    sku=models.ForeignKey('SKU', on_delete=models.CASCADE)
+    sku=models.ForeignKey('SKU', on_delete=models.CASCADE, related_name='images')
     image=models.ImageField()
 
     class Meta:
@@ -132,7 +132,6 @@ class SpecificationOption(BaseModel):
 
 class SKUSpecification(BaseModel):
     sku=models.ForeignKey('SKU', on_delete=models.CASCADE, related_name='specs')
-    spec=models.ForeignKey('SPUSpecification', on_delete=models.PROTECT)
     option=models.ForeignKey('SpecificationOption', on_delete=models.PROTECT)
 
     class Meta:

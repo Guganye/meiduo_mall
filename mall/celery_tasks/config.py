@@ -1,4 +1,7 @@
-import os
+from apps.goods.utils import get_categories, get_breadcrumb
 
-REDIS_PASSWORD=os.getenv('REDIS_PASSWORD')
-broker_url = f'redis://:{REDIS_PASSWORD}@192.168.234.128:6379/15'
+
+def generic_detail_html(sku):
+    categories=get_categories()
+    breadcrumb=get_breadcrumb(sku.category)
+    goods_specs=get_goods_specs(sku)

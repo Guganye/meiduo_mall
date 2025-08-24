@@ -13,10 +13,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include, register_converter
 
 from apps.verifications.converters import UUIDConverter, MobileConverter
+from mall import settings
 
 register_converter(UUIDConverter, 'uuid')
 register_converter(MobileConverter, 'mobile')
@@ -30,3 +32,5 @@ urlpatterns = [
     path('', include('apps.goods.urls')),
     path('', include('apps.contents.urls'))
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

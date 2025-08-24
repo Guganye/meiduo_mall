@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>{{ breadcrumb.cat1 }} >> {{ breadcrumb.cat2 }} >> {{ breadcrumb.cat3 }}</div>
+<div>
+    {% for spec, option in goods_specs.items %}
+        <div style="color: blue">{{ spec }} -> {{ option }}</div>
+    {% endfor %}
+</div>
+</body>
+</html>

@@ -2459,3 +2459,545 @@ INFO 2025-08-21 19:59:48,521 basehttp 212 "GET /index/ HTTP/1.1" 200 4029
 INFO 2025-08-21 20:00:20,793 basehttp 212 "GET /index/ HTTP/1.1" 200 5300
 INFO 2025-08-21 20:01:21,130 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
 INFO 2025-08-21 20:01:23,091 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 15:09:56,229 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 15:10:28,974 basehttp 212 "GET /image_codes/123/ HTTP/1.1" 200 1379
+INFO 2025-08-22 15:10:41,257 basehttp 212 "GET /sms_codes/18126106878?image_code=vktj&image_code_id=123 HTTP/1.1" 301 0
+INFO 2025-08-22 15:10:41,839 basehttp 212 "GET /sms_codes/18126106878/?image_code=vktj&image_code_id=123 HTTP/1.1" 200 27
+INFO 2025-08-22 15:11:45,816 basehttp 212 "POST /register/ HTTP/1.1" 200 27
+INFO 2025-08-22 15:12:12,107 basehttp 212 "GET /areas HTTP/1.1" 301 0
+INFO 2025-08-22 15:12:12,151 basehttp 212 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2025-08-22 15:12:22,286 basehttp 212 "POST /addresses/create/ HTTP/1.1" 200 291
+INFO 2025-08-22 15:12:35,393 basehttp 212 "GET /addresses/ HTTP/1.1" 200 295
+INFO 2025-08-22 15:12:59,349 basehttp 212 "POST /addresses/create/ HTTP/1.1" 200 283
+INFO 2025-08-22 15:13:06,163 basehttp 212 "DELETE /addresses/1 HTTP/1.1" 200 27
+INFO 2025-08-22 15:13:11,520 basehttp 212 "GET /addresses/ HTTP/1.1" 200 287
+INFO 2025-08-22 15:13:29,010 basehttp 212 "PUT /addresses/2 HTTP/1.1" 200 287
+INFO 2025-08-22 15:13:33,652 basehttp 212 "GET /addresses/ HTTP/1.1" 200 291
+INFO 2025-08-22 15:13:46,272 basehttp 212 "PUT /addresses/2 HTTP/1.1" 200 287
+INFO 2025-08-22 15:14:11,674 basehttp 212 "GET /addresses/ HTTP/1.1" 200 291
+INFO 2025-08-22 15:14:38,273 basehttp 212 "GET /center/ HTTP/1.1" 200 27
+INFO 2025-08-22 15:14:50,450 basehttp 212 "GET /index/ HTTP/1.1" 200 5751
+INFO 2025-08-22 15:17:59,910 basehttp 212 "GET /index/ HTTP/1.1" 200 5687
+INFO 2025-08-22 17:03:02,754 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\mall\settings.py changed, reloading.
+INFO 2025-08-22 17:03:05,659 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 17:03:49,727 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\mall\settings.py changed, reloading.
+INFO 2025-08-22 17:03:51,575 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 17:08:54,732 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\mall\urls.py changed, reloading.
+INFO 2025-08-22 17:08:57,889 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-22 17:19:50,684 log 246 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'ImageFieldFile' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py", line 21, in get
+    return render(request, 'index.html', context)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\template\base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\template\base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\fields\files.py", line 66, in url
+    self._require_file()
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\fields\files.py", line 41, in _require_file
+    raise ValueError(
+ValueError: The 'image' attribute has no file associated with it.
+ERROR 2025-08-22 17:19:50,717 basehttp 212 "GET /index/ HTTP/1.1" 500 173295
+INFO 2025-08-22 17:23:35,324 basehttp 212 "GET /index/ HTTP/1.1" 200 5499
+INFO 2025-08-22 18:51:50,263 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\urls.py changed, reloading.
+INFO 2025-08-22 18:51:53,021 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 18:54:59,796 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 18:55:02,884 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 18:55:45,602 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 18:55:47,615 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 18:56:25,985 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 18:56:28,660 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 18:56:38,923 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 18:56:40,848 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 19:01:45,128 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 19:01:47,817 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 19:02:57,291 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 19:02:59,409 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 19:06:03,999 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 19:06:07,341 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 19:09:45,441 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 19:09:48,137 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 19:10:22,823 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 19:10:24,749 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 19:10:37,171 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 19:10:39,012 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 19:11:37,539 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 19:11:39,745 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 19:12:31,553 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 19:12:33,446 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 19:13:24,752 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 19:13:26,704 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 19:13:45,531 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 19:13:47,918 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 19:13:56,474 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 19:13:58,362 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 19:14:23,106 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 19:14:24,822 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 19:15:18,077 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 19:15:20,695 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 19:15:36,815 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 19:15:38,740 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 19:17:35,445 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 19:17:38,241 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 19:17:44,478 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 19:17:46,485 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 19:18:41,427 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 19:18:43,635 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-22 19:30:31,358 log 246 Internal Server Error: /list/1/skus
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: get() got an unexpected keyword argument 'category_id'
+ERROR 2025-08-22 19:30:31,382 basehttp 212 "GET /list/1/skus HTTP/1.1" 500 72218
+ERROR 2025-08-22 19:31:10,086 log 246 Internal Server Error: /list/1/skus
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: get() got an unexpected keyword argument 'category_id'
+ERROR 2025-08-22 19:31:10,094 basehttp 212 "GET /list/1/skus HTTP/1.1" 500 72218
+ERROR 2025-08-22 19:31:51,584 log 246 Internal Server Error: /list/1/skus
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: get() got an unexpected keyword argument 'category_id'
+ERROR 2025-08-22 19:31:51,593 basehttp 212 "GET /list/1/skus?ordering=create_time&page=1&page_size=5 HTTP/1.1" 500 73108
+INFO 2025-08-22 19:32:23,410 basehttp 212 "GET /index/ HTTP/1.1" 200 5499
+INFO 2025-08-22 19:32:53,480 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 19:32:55,651 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-22 19:33:01,166 log 246 Internal Server Error: /list/1/skus
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: get() got an unexpected keyword argument 'category_id'
+ERROR 2025-08-22 19:33:01,176 basehttp 212 "GET /list/1/skus?ordering=create_time&page=1&page_size=5 HTTP/1.1" 500 73108
+INFO 2025-08-22 19:34:20,399 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\urls.py changed, reloading.
+INFO 2025-08-22 19:34:22,688 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-22 19:34:26,008 log 246 Internal Server Error: /list/1/skus
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py", line 35, in get
+    breadcrumb=get_breadcrumb()
+TypeError: get_breadcrumb() missing 1 required positional argument: 'category'
+ERROR 2025-08-22 19:34:26,022 basehttp 212 "GET /list/1/skus?ordering=create_time&page=1&page_size=5 HTTP/1.1" 500 77916
+INFO 2025-08-22 19:34:59,146 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 19:35:01,754 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-22 19:35:07,142 log 246 Internal Server Error: /list/1/skus
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py", line 37, in get
+    skus=SKU.objects.filter(category=category).order_by(ordering)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\sql\query.py", line 1546, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\sql\query.py", line 1577, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\sql\query.py", line 1427, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\sql\query.py", line 1237, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\db\models\sql\query.py", line 1725, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'category' into field. Choices are: caption, comments, cost_price, create_time, default_image, default_image_id, flashnew, id, images, is_launched, market_price, name, price, sales, specs, spu, spu_id, stock, update_time, url
+ERROR 2025-08-22 19:35:07,167 basehttp 212 "GET /list/1/skus?ordering=create_time&page=1&page_size=5 HTTP/1.1" 500 123598
+INFO 2025-08-22 19:42:47,609 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 19:42:49,787 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-22 19:48:24,473 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-22 19:48:26,020 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 00:12:51,685 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-23 00:12:56,783 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 00:13:12,114 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\models.py changed, reloading.
+INFO 2025-08-23 00:13:15,563 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 00:14:09,024 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\models.py changed, reloading.
+INFO 2025-08-23 00:14:10,991 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 00:34:44,798 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-23 00:34:47,956 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 00:44:39,813 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-23 00:44:41,976 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 00:44:55,036 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-23 00:44:57,624 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 00:49:38,769 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-23 00:49:41,030 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 00:51:15,617 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-23 00:51:17,213 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-23 00:53:14,666 log 246 Internal Server Error: /list/1/skus
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py", line 64, in get
+    'image': sku.image.url,
+AttributeError: 'SKU' object has no attribute 'image'
+ERROR 2025-08-23 00:53:14,678 basehttp 212 "GET /list/1/skus?ordering=create_time&page=1&page_size=5 HTTP/1.1" 500 80245
+INFO 2025-08-23 00:53:55,459 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-23 00:53:57,309 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-23 00:54:04,521 log 246 Internal Server Error: /list/1/skus
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py", line 64, in get
+    'default_image_url': sku.default_image.url, # FileField¿‡µƒurl∑Ω∑®
+AttributeError: 'SKUImage' object has no attribute 'url'
+ERROR 2025-08-23 00:54:04,530 basehttp 212 "GET /list/1/skus?ordering=create_time&page=1&page_size=5 HTTP/1.1" 500 80341
+INFO 2025-08-23 00:54:36,324 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-23 00:54:38,051 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-23 00:54:43,611 log 246 Internal Server Error: /list/1/skus
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py", line 69, in get
+    return JsonResponse({'code':0, 'errmsg':'ok', 'breadcrumb':breadcrumb
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\http\response.py", line 731, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+  File "C:\Users\∞„∞„Àß\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\∞„∞„Àß\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\∞„∞„Àß\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\serializers\json.py", line 106, in default
+    return super().default(o)
+  File "C:\Users\∞„∞„Àß\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type SKUImage is not JSON serializable
+ERROR 2025-08-23 00:54:43,623 basehttp 212 "GET /list/1/skus?ordering=create_time&page=1&page_size=5 HTTP/1.1" 500 115599
+INFO 2025-08-23 00:55:13,614 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-23 00:55:15,583 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-23 00:55:18,444 log 246 Internal Server Error: /list/1/skus
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py", line 64, in get
+    'default_image_url': sku.default_image.url, # FileField¿‡µƒurl∑Ω∑®
+AttributeError: 'SKUImage' object has no attribute 'url'
+ERROR 2025-08-23 00:55:18,459 basehttp 212 "GET /list/1/skus?ordering=create_time&page=1&page_size=5 HTTP/1.1" 500 80341
+INFO 2025-08-23 00:55:42,624 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-23 00:55:44,669 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 00:56:25,593 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-23 00:56:28,145 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 00:56:30,357 basehttp 212 "GET /list/1/skus?ordering=create_time&page=1&page_size=5 HTTP/1.1" 200 840
+INFO 2025-08-23 00:56:52,702 basehttp 212 "GET /list/1/skus?ordering=create_time&page=2&page_size=5 HTTP/1.1" 200 650
+ERROR 2025-08-23 00:57:08,613 log 246 Internal Server Error: /list/1/skus
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py", line 55, in get
+    page_skus=paginator.page(page)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\paginator.py", line 72, in page
+    number = self.validate_number(number)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\paginator.py", line 54, in validate_number
+    raise EmptyPage(_("That page contains no results"))
+django.core.paginator.EmptyPage: That page contains no results
+ERROR 2025-08-23 00:57:08,624 basehttp 212 "GET /list/1/skus?ordering=create_time&page=3&page_size=5 HTTP/1.1" 500 87245
+INFO 2025-08-23 00:57:15,706 basehttp 212 "GET /list/1/skus?ordering=create_time&page=2&page_size=5 HTTP/1.1" 200 650
+INFO 2025-08-23 00:59:08,701 basehttp 212 "GET /list/1/skus?ordering=create_time&page=2&page_size=5 HTTP/1.1" 200 379
+INFO 2025-08-23 00:59:50,097 basehttp 212 "GET /list/1/skus?ordering=create_time&page=2&page_size=5 HTTP/1.1" 200 379
+ERROR 2025-08-23 01:00:03,741 log 246 Internal Server Error: /list/7/skus
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py", line 55, in get
+    page_skus=paginator.page(page)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\paginator.py", line 72, in page
+    number = self.validate_number(number)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\paginator.py", line 54, in validate_number
+    raise EmptyPage(_("That page contains no results"))
+django.core.paginator.EmptyPage: That page contains no results
+ERROR 2025-08-23 01:00:03,754 basehttp 212 "GET /list/7/skus?ordering=create_time&page=2&page_size=5 HTTP/1.1" 500 86943
+INFO 2025-08-23 01:00:10,761 basehttp 212 "GET /list/7/skus?ordering=create_time&page=1&page_size=5 HTTP/1.1" 200 431
+INFO 2025-08-23 01:20:58,095 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-23 01:21:00,368 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 12:58:59,111 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 12:59:03,477 basehttp 212 "GET /list/7/skus?ordering=create_time&page=1&page_size=5 HTTP/1.1" 200 431
+INFO 2025-08-23 12:59:11,689 basehttp 212 "GET /index/ HTTP/1.1" 200 5487
+INFO 2025-08-23 18:44:52,713 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 18:49:41,087 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\mall\settings.py changed, reloading.
+INFO 2025-08-23 18:49:43,754 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 18:53:07,384 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\mall\settings.py changed, reloading.
+INFO 2025-08-23 18:53:09,130 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 19:11:02,681 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-23 19:11:04,525 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-23 19:11:35,310 log 246 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py", line 35, in get
+    with open(file_path, 'w', encoding='utf-8') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\∞„∞„Àß\\Desktop\\mall\\mall\\static/index.html'
+ERROR 2025-08-23 19:11:35,324 basehttp 212 "GET /index/ HTTP/1.1" 500 86615
+INFO 2025-08-23 19:12:12,775 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-23 19:12:15,122 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-23 19:12:18,974 log 246 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py", line 35, in get
+    with open(file_path, 'w', encoding='utf-8') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\∞„∞„Àß\\Desktop\\mall\\mall\\static\\index.html'
+ERROR 2025-08-23 19:12:18,982 basehttp 212 "GET /index/ HTTP/1.1" 500 86619
+INFO 2025-08-23 19:12:48,656 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-23 19:12:50,441 autoreload 667 Watching for file changes with StatReloader
+ERROR 2025-08-23 19:12:54,549 log 246 Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\.venv\lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py", line 35, in get
+    with open(file_path, 'x', encoding='utf-8') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\∞„∞„Àß\\Desktop\\mall\\mall\\static\\index.html'
+ERROR 2025-08-23 19:12:54,562 basehttp 212 "GET /index/ HTTP/1.1" 500 86619
+INFO 2025-08-23 19:13:16,584 basehttp 212 "GET /index/ HTTP/1.1" 200 5487
+INFO 2025-08-23 19:14:40,034 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-23 19:14:42,139 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 19:27:11,056 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\mall\settings.py changed, reloading.
+INFO 2025-08-23 19:27:13,188 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 19:27:44,656 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\mall\settings.py changed, reloading.
+INFO 2025-08-23 19:27:46,679 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 19:28:45,464 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\mall\settings.py changed, reloading.
+INFO 2025-08-23 19:28:48,615 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 19:29:40,226 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\mall\settings.py changed, reloading.
+INFO 2025-08-23 19:29:43,894 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 19:52:39,789 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 19:53:23,523 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 19:54:24,931 basehttp 212 "GET /admin HTTP/1.1" 301 0
+INFO 2025-08-23 19:54:24,972 basehttp 212 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-08-23 19:54:25,040 basehttp 212 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181
+INFO 2025-08-23 19:54:27,900 basehttp 212 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+INFO 2025-08-23 19:54:27,900 basehttp 212 "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2025-08-23 19:54:27,912 basehttp 212 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-08-23 19:54:27,920 basehttp 212 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+INFO 2025-08-23 19:54:27,950 basehttp 212 "GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+INFO 2025-08-23 19:54:27,957 basehttp 212 "GET /static/admin/css/base.css HTTP/1.1" 200 21310
+INFO 2025-08-23 19:54:27,995 basehttp 212 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+WARNING 2025-08-23 19:54:28,322 log 246 Not Found: /favicon.ico
+WARNING 2025-08-23 19:54:28,324 basehttp 212 "GET /favicon.ico HTTP/1.1" 404 5114
+INFO 2025-08-23 19:54:46,622 basehttp 212 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4344
+INFO 2025-08-23 19:55:37,099 basehttp 212 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4341
+INFO 2025-08-23 19:58:02,635 basehttp 212 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4344
+INFO 2025-08-23 19:58:37,253 basehttp 212 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-08-23 19:58:37,315 basehttp 212 "GET /admin/ HTTP/1.1" 200 9127
+INFO 2025-08-23 19:58:37,383 basehttp 212 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2025-08-23 19:58:37,556 basehttp 212 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-08-23 19:58:37,557 basehttp 212 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-08-23 19:59:20,619 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\mall\settings.py changed, reloading.
+INFO 2025-08-23 19:59:24,009 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 19:59:54,409 basehttp 212 "GET /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 200 53134
+INFO 2025-08-23 19:59:54,549 basehttp 212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-08-23 19:59:57,041 basehttp 212 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-08-23 19:59:57,043 basehttp 212 "GET /static/admin/css/forms.css HTTP/1.1" 200 9090
+INFO 2025-08-23 19:59:57,052 basehttp 212 "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+INFO 2025-08-23 19:59:57,054 basehttp 212 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2025-08-23 19:59:57,061 basehttp 212 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-08-23 19:59:57,063 basehttp 212 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11921
+INFO 2025-08-23 19:59:57,069 basehttp 212 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+INFO 2025-08-23 19:59:57,072 basehttp 212 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-08-23 19:59:57,079 basehttp 212 "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+INFO 2025-08-23 19:59:57,085 basehttp 212 "GET /static/admin/js/inlines.js HTTP/1.1" 200 15526
+INFO 2025-08-23 19:59:57,095 basehttp 212 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+INFO 2025-08-23 19:59:57,101 basehttp 212 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+INFO 2025-08-23 19:59:57,140 basehttp 212 "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+INFO 2025-08-23 19:59:57,140 basehttp 212 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2025-08-23 20:00:19,321 basehttp 212 "POST /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 302 0
+INFO 2025-08-23 20:00:19,428 basehttp 212 "GET /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 200 53410
+INFO 2025-08-23 20:00:19,506 basehttp 212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-08-23 20:00:19,685 basehttp 212 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2025-08-23 20:00:22,785 basehttp 212 "GET /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 200 53134
+INFO 2025-08-23 20:00:32,843 basehttp 212 "GET /admin/ HTTP/1.1" 200 9487
+INFO 2025-08-23 20:00:35,463 basehttp 212 "GET /admin/django_celery_beat/clockedschedule/add/ HTTP/1.1" 200 13376
+INFO 2025-08-23 20:00:35,559 basehttp 212 "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+INFO 2025-08-23 20:00:35,578 basehttp 212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-08-23 20:00:35,580 basehttp 212 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-08-23 20:00:35,825 basehttp 212 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2025-08-23 20:00:35,830 basehttp 212 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+INFO 2025-08-23 20:00:48,104 basehttp 212 "GET /admin/ HTTP/1.1" 200 9487
+INFO 2025-08-23 20:00:56,668 basehttp 212 "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 15544
+INFO 2025-08-23 20:00:56,773 basehttp 212 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+INFO 2025-08-23 20:00:56,793 basehttp 212 "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2025-08-23 20:00:56,798 basehttp 212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-08-23 20:00:56,872 basehttp 212 "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+INFO 2025-08-23 20:00:56,911 basehttp 212 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2025-08-23 20:00:56,912 basehttp 212 "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2025-08-23 20:01:37,258 basehttp 212 "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 33092
+INFO 2025-08-23 20:01:37,355 basehttp 212 "GET /static/admin/js/collapse.js HTTP/1.1" 200 1803
+INFO 2025-08-23 20:01:37,372 basehttp 212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-08-23 20:01:37,482 basehttp 212 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2025-08-23 20:16:44,040 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 20:17:34,901 basehttp 212 "GET /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-08-23 20:17:34,990 basehttp 212 "GET /admin/ HTTP/1.1" 200 9487
+INFO 2025-08-23 20:17:40,041 basehttp 212 "GET /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 200 53134
+INFO 2025-08-23 20:17:40,159 basehttp 212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-08-23 20:17:45,907 basehttp 212 "GET /admin/ HTTP/1.1" 200 9487
+INFO 2025-08-23 20:17:51,168 basehttp 212 "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 33139
+INFO 2025-08-23 20:17:51,383 basehttp 212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-08-23 20:20:32,038 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-23 20:27:14,778 basehttp 212 "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 33139
+INFO 2025-08-23 20:27:14,997 basehttp 212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-08-23 20:27:24,291 basehttp 212 "GET /admin/ HTTP/1.1" 200 9487
+INFO 2025-08-23 20:27:28,686 basehttp 212 "GET /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 200 53134
+INFO 2025-08-23 20:27:28,798 basehttp 212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-08-23 20:27:37,318 basehttp 212 "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 33139
+INFO 2025-08-23 20:27:37,422 basehttp 212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-08-23 20:34:34,025 basehttp 212 "GET /admin/ HTTP/1.1" 200 9487
+INFO 2025-08-23 20:34:42,690 basehttp 212 "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 16314
+INFO 2025-08-23 20:34:42,809 basehttp 212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-08-23 20:35:11,084 basehttp 212 "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 33241
+INFO 2025-08-23 20:35:11,184 basehttp 212 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-08-23 23:59:14,766 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\mall\settings.py changed, reloading.
+INFO 2025-08-23 23:59:18,613 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-24 00:20:26,115 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\contents\migrations\0001_initial.py changed, reloading.
+INFO 2025-08-24 00:20:28,470 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-24 00:57:59,315 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-24 00:59:07,714 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\mall\settings.py changed, reloading.
+INFO 2025-08-24 00:59:12,214 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-24 12:17:28,511 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-24 12:54:18,770 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\models.py changed, reloading.
+INFO 2025-08-24 12:54:21,901 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-24 12:59:51,483 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\utils.py changed, reloading.
+INFO 2025-08-24 12:59:55,280 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-24 13:57:29,504 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\utils.py changed, reloading.
+INFO 2025-08-24 13:57:32,175 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-24 14:13:41,600 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\views.py changed, reloading.
+INFO 2025-08-24 14:13:45,042 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-24 14:15:16,025 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\goods\urls.py changed, reloading.
+INFO 2025-08-24 14:15:18,802 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-24 14:15:24,924 basehttp 212 "GET /detail/1 HTTP/1.1" 301 0
+INFO 2025-08-24 14:15:25,664 basehttp 212 "GET /detail/1/ HTTP/1.1" 200 333
+INFO 2025-08-24 14:17:01,040 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\contents\detail.py changed, reloading.
+INFO 2025-08-24 14:17:04,462 autoreload 667 Watching for file changes with StatReloader
+INFO 2025-08-24 14:18:42,945 autoreload 265 C:\Users\∞„∞„Àß\Desktop\mall\mall\apps\contents\detail.py changed, reloading.
+INFO 2025-08-24 14:18:46,377 autoreload 667 Watching for file changes with StatReloader

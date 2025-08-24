@@ -40,8 +40,13 @@ INSTALLED_APPS = [
     'apps.verifications',
     'apps.areas',
     'apps.goods',
-    'apps.contents'
+    'apps.contents',
+    'django_celery_beat',
+    'django_celery_results'
 ]
+
+# # 3、celery beat启动
+# celery -A celery_tasks.main beat -l info
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -213,3 +218,11 @@ LOGGING = {
 AUTH_USER_MODEL = 'users.User'
 # ---------------
 SECRET_KEY='gaudgakwbca'
+# --------------
+MEDIA_ROOT=os.path.join(BASE_DIR, 'images') # 指定文件存储目录
+MEDIA_URL='/images/' # 指定url前缀
+
+
+
+
+SUPERUSER_USERNAME='gu'

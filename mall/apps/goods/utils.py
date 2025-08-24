@@ -1,6 +1,6 @@
 from collections import OrderedDict
 
-from apps.goods.models import GoodsChannel
+from apps.goods.models import GoodsChannel, SKUSpecification
 
 
 def get_categories():
@@ -24,3 +24,38 @@ def get_categories():
             categories[group_id]['sub_cats'].append(cat2)
 
     return categories
+
+def get_breadcrumb(category):
+    dict={
+        'cat1':'',
+        'cat2':'',
+        'cat3':''
+    }
+    classification=0
+
+    if category.parent is None:
+        dict['cat1'] = category.name
+        classification=1
+    elif category.parent.parent is None:
+        dict['cat2'] = category.name
+        dict['cat1'] = category.parent.name
+        classification=2
+    elif category.parent.parent.parent is None:
+        dict['cat1'] = category.parent.parent.name
+        dict['cat2'] = category.parent.name
+        dict['cat3'] = category.name
+        classification=3
+    else:
+        dict['cat1'] = category.parent.parent.parent.name
+        dict['cat2'] = category.parent.parent.name
+        dict['cat3'] = category.parent.name
+        classification=4
+    return dict, classification
+
+def get_goods_specs(sku):
+    skuspecs=SKUSpecification.objects.filter(sku=sku)
+    dict={}
+    for skuspec in skuspecs:
+        dict[skuspec.option.spec.name]=skuspec.option.value
+
+    return dict
