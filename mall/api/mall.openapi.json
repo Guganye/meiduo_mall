@@ -1,0 +1,703 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "个人项目",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "tags": [],
+  "paths": {
+    "/register/": {
+      "post": {
+        "summary": "register",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  },
+                  "password2": {
+                    "type": "string"
+                  },
+                  "mobile": {
+                    "type": "string"
+                  },
+                  "sms_code": {
+                    "type": "string"
+                  },
+                  "allow": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "username",
+                  "password",
+                  "password2",
+                  "mobile",
+                  "sms_code",
+                  "allow"
+                ]
+              },
+              "example": {
+                "username": "guganye",
+                "password": "983817379gujinyi",
+                "password2": "983817379gujinyi",
+                "mobile": "18126106878",
+                "sms_code": "9666",
+                "allow": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/image_codes/123/": {
+      "get": {
+        "summary": "image_code",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/sms_codes/18126106878": {
+      "get": {
+        "summary": "sms_code",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "image_code",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "example": "khky",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "image_code_id",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "example": "123",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/login/": {
+      "post": {
+        "summary": "login_username",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "username",
+                  "password"
+                ]
+              },
+              "example": {
+                "username": "guganye",
+                "password": "983817379gujinyi"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/logout": {
+      "delete": {
+        "summary": "logout",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/emails/": {
+      "put": {
+        "summary": "email_save",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "email"
+                ]
+              },
+              "example": {
+                "email": "3029946904@qq.com"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/emails/verification/": {
+      "put": {
+        "summary": "email_verification",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "token",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "example": "eyJhbGciOiJIUzUxMiIsImlhdCI6MTc1NTUyMjM0MywiZXhwIjoxNzU1NTI0MTQzfQ.eyJ1c2VyX2lkIjoxfQ.YM3RLzuULrQmTU1mobqif-vGqCwswhf6T2RN84RVRqLZzq9KodUUOHqdYnVXWN9cP7WHlObhzKli6upDNB8DmA",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/areas": {
+      "get": {
+        "summary": "areas",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/areas/120100": {
+      "get": {
+        "summary": "subareas",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/addresses/create/": {
+      "post": {
+        "summary": "address_create",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "receiver": {
+                    "type": "string"
+                  },
+                  "province_id": {
+                    "type": "string"
+                  },
+                  "city_id": {
+                    "type": "string"
+                  },
+                  "district_id": {
+                    "type": "string"
+                  },
+                  "place": {
+                    "type": "string"
+                  },
+                  "mobile": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "receiver",
+                  "province_id",
+                  "city_id",
+                  "district_id",
+                  "place",
+                  "mobile"
+                ]
+              },
+              "example": {
+                "receiver": "bangbangshy",
+                "province_id": "110000",
+                "city_id": "110100",
+                "district_id": "110101",
+                "place": "83号",
+                "mobile": "18126106878"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/addresses/": {
+      "get": {
+        "summary": "address_get",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/addresses/1": {
+      "delete": {
+        "summary": "address_del",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/addresses/2": {
+      "put": {
+        "summary": "address_update",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "receiver": {
+                    "type": "string"
+                  },
+                  "province_id": {
+                    "type": "string"
+                  },
+                  "city_id": {
+                    "type": "string"
+                  },
+                  "district_id": {
+                    "type": "string"
+                  },
+                  "place": {
+                    "type": "string"
+                  },
+                  "mobile": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "receiver",
+                  "province_id",
+                  "city_id",
+                  "district_id",
+                  "place",
+                  "mobile"
+                ]
+              },
+              "example": {
+                "receiver": "bangbangshy",
+                "province_id": "110000",
+                "city_id": "110100",
+                "district_id": "110102",
+                "place": "83号",
+                "mobile": "18126106878"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/addresses/2/default/": {
+      "put": {
+        "summary": "address_default",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/index/": {
+      "get": {
+        "summary": "index",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/list/7/skus": {
+      "get": {
+        "summary": "list",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "ordering",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "example": "create_time",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "example": "1",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "example": "5",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/detail/1": {
+      "get": {
+        "summary": "detail",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "example": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title>Title</title>\r\n</head>\r\n<body>\r\n<div>手机 >> 通讯 >> 老人机</div>\r\n<div>\r\n    \r\n        <div style=\"color: blue\">颜色 -> 黑色钛金属</div>\r\n    \r\n        <div style=\"color: blue\">存储容量 -> 128GB</div>\r\n    \r\n</div>\r\n</body>\r\n</html>"
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/center/": {
+      "get": {
+        "summary": "center",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    }
+  },
+  "components": {
+    "schemas": {},
+    "securitySchemes": {}
+  },
+  "servers": [],
+  "security": []
+}
