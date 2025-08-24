@@ -1,3 +1,3 @@
 - The backend developer is like a translator, figuring out how to convert business requirements into precise, stable, and efficient CRUD operations.
 - Largerly follow the online course of the Meiduo Mall project by Black Horse Programmer: https://www.bilibili.com/video/BV1nf4y1k7G3/
-- skills used: Django, MySQL, Redis, Celery, SMTP
+- skills used: Django, MySQL, Redis, Celery, Pipline, SMTP
