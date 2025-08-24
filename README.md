@@ -1,0 +1,3 @@
+- largerly follow the online course of the Meiduo Mall project by Black Horse Programmer: https://www.bilibili.com/video/BV1nf4y1k7G3/
+- The backend is like a translator, figuring out how to convert business requirements into precise, stable, and efficient CRUD operations.
+- used skills: Django, MySQL, Redis, Celery, SMTP
